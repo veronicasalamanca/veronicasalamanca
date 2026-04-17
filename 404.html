@@ -1,1 +1,136 @@
-<html><head><title>404</title></head><body>Not found</body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página no encontrada | Verónica Salamanca</title>
+
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --green-900: #667b73;
+      --mint-500: #a7c6b7;
+      --gold-500: #c5a94e;
+      --cream-50: #faf8f4;
+      --text-900: #181818;
+      --text-700: #4e4e4e;
+      --white: #ffffff;
+      --radius-xl: 32px;
+      --shadow-soft: 0 18px 45px rgba(102, 123, 115, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", sans-serif;
+      background: var(--cream-50);
+      color: var(--text-900);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .wrapper {
+      max-width: 720px;
+    }
+
+    img.logo {
+      width: 180px;
+      margin: 0 auto 30px;
+    }
+
+    h1 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: var(--text-700);
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--green-900);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: var(--gold-500);
+      color: white;
+    }
+
+    .btn-ghost {
+      border: 1px solid rgba(102,123,115,0.3);
+      color: var(--green-900);
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    
+    <img src="/images/Logo fondo transparente.png" alt="Verónica Salamanca" class="logo" />
+
+    <h1>Esta página no existe</h1>
+
+    <p>
+      Puede que el enlace esté roto o que la página ya no esté disponible.
+      Pero si has llegado hasta aquí, probablemente estás buscando algo concreto.
+    </p>
+
+    <p>
+      Puedes volver al inicio o ir directamente a una de las líneas principales.
+    </p>
+
+    <div class="btn-row">
+      <a href="/" class="btn btn-primary">Volver al inicio</a>
+      <a href="/prevenza/" class="btn btn-secondary">Ir a Prevenza</a>
+      <a href="/equilibrate/" class="btn btn-ghost">Ir a Equilíbrate</a>
+      <a href="/arquenza/" class="btn btn-ghost">Ir a Arquenza</a>
+    </div>
+
+    <div class="btn-row" style="margin-top:20px;">
+      <a href="https://wa.me/34655355826" target="_blank" class="btn btn-secondary">
+        Escríbeme por WhatsApp
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>
