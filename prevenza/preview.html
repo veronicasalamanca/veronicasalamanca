@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prevenza | Dirección operativa y preventiva para empresas</title>
+  <meta
+    name="description"
+    content="Orden, control, prevención, PRL, CAE y sostenibilidad para empresas que necesitan estructura real y menos caos."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.veronicasalamanca.com/prevenza/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Verónica Salamanca" />
+  <meta property="og:title" content="Prevenza | Dirección operativa y preventiva para empresas" />
+  <meta property="og:description" content="Orden, control, prevención, PRL, CAE y sostenibilidad para empresas que necesitan estructura real y menos caos." />
+  <meta property="og:url" content="https://www.veronicasalamanca.com/prevenza/" />
+  <meta property="og:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Prevenza | Dirección operativa y preventiva para empresas" />
+  <meta name="twitter:description" content="Orden, control, prevención, PRL, CAE y sostenibilidad para empresas que necesitan estructura real y menos caos." />
+  <meta name="twitter:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --green-900: #667b73;
+      --green-800: #7f938a;
+      --mint-500: #a7c6b7;
+      --mint-300: #dbe9e2;
+      --lilac-500: #b9b0c8;
+      --gold-500: #c5a94e;
+      --cream-50: #faf8f4;
+      --cream-100: #f3eee7;
+      --sand-200: #e7ddd1;
+      --text-900: #181818;
+      --text-700: #4e4e4e;
+      --text-500: #7a7a7a;
+      --white: #ffffff;
+      --shadow-soft: 0 18px 45px rgba(102, 123, 115, 0.14);
+      --shadow-card: 0 12px 26px rgba(24, 24, 24, 0.07);
+      --radius-xl: 32px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", system-ui, sans-serif;
+      color: var(--text-900);
+      background: var(--cream-50);
+      line-height: 1.55;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .section { padding: 84px 0; }
+    .section-tight { padding: 62px 0; }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(167, 198, 183, 0.18);
+      color: var(--green-900);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3, .nav-links, .dropdown-menu a, .mobile-nav a, .mobile-submenu summary {
+      font-family: "Cinzel", serif;
+      letter-spacing: -0.02em;
+      line-height: 1.02;
+      margin: 0 0 16px;
+    }
+
+    h1 { font-size: clamp(2.7rem, 6vw, 5.2rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3.6rem); }
+    h3 { font-size: clamp(1.3rem, 2.3vw, 2rem); }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--text-700);
+      font-size: 1rem;
+    }
+
+    .lead { font-size: 1.1rem; }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform .2s ease, opacity .2s ease, background .2s ease, border-color .2s ease;
+      text-align: center;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--green-900);
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-secondary {
+      background: var(--gold-500);
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(102, 123, 115, 0.22);
+      color: var(--green-900);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(102, 123, 115, 0.98);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo img {
+      width: 180px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--white);
+      font-size: 0.96rem;
+      margin: 0;
+    }
+
+    .nav-links > a,
+    .dropdown-toggle {
+      margin: 0;
+      color: var(--white);
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .has-dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown-toggle::after {
+      content: "▾";
+      margin-left: 8px;
+      font-size: 0.78rem;
+      font-family: sans-serif;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 300px;
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(102,123,115,0.12);
+      padding: 14px;
+      display: none;
+      z-index: 20;
+    }
+
+    .has-dropdown:hover .dropdown-menu,
+    .has-dropdown:focus-within .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 12px;
+      border-radius: 12px;
+      color: var(--green-900);
+      font-size: 0.96rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .dropdown-menu a span {
+      display: block;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.84rem;
+      color: var(--text-500);
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    .dropdown-menu a:hover { background: var(--cream-100); }
+
+    .mobile-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: transparent;
+      border-radius: 14px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      position: relative;
+    }
+
+    .mobile-toggle span,
+    .mobile-toggle::before,
+    .mobile-toggle::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 99px;
+      transition: transform .25s ease, opacity .25s ease;
+      position: absolute;
+    }
+
+    .mobile-toggle span { transform: translateY(0); }
+    .mobile-toggle::before { transform: translateY(-7px); }
+    .mobile-toggle::after { transform: translateY(7px); }
+
+    .mobile-toggle.active span { opacity: 0; }
+    .mobile-toggle.active::before { transform: rotate(45deg); }
+    .mobile-toggle.active::after { transform: rotate(-45deg); }
+
+    .mobile-panel {
+      display: none;
+      position: fixed;
+      inset: 76px 0 0 0;
+      background: rgba(250, 248, 244, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 90;
+      overflow-y: auto;
+      border-top: 1px solid rgba(102, 123, 115, 0.12);
+      padding: 18px 0 24px;
+    }
+
+    .mobile-panel.open { display: block; }
+
+    .mobile-nav {
+      width: min(var(--max), calc(100% - 1.2rem));
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mobile-nav > a,
+    .mobile-submenu summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white);
+      color: var(--green-900);
+      border: 1px solid rgba(102, 123, 115, 0.12);
+      border-radius: 16px;
+      padding: 16px 18px;
+      font-size: 1.05rem;
+      box-shadow: var(--shadow-card);
+      margin: 0;
+    }
+
+    .mobile-submenu summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .mobile-submenu summary::-webkit-details-marker { display: none; }
+
+    .mobile-submenu[open] summary {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .mobile-submenu-links {
+      background: var(--white);
+      border: 1px solid rgba(102, 123, 115, 0.12);
+      border-top: 0;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      padding: 6px 10px 12px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .mobile-submenu-links a {
+      display: block;
+      padding: 12px 10px;
+      border-radius: 12px;
+      color: var(--green-900);
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.96rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .mobile-submenu-links a + a { margin-top: 4px; }
+    .mobile-submenu-links a:hover { background: var(--cream-100); }
+
+    .mobile-contact-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top left, rgba(197,169,78,0.10), transparent 28%),
+        linear-gradient(180deg, #faf8f4 0%, #f2ece4 100%);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.03fr 0.97fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .hero-photo {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      object-fit: cover;
+      box-shadow: var(--shadow-soft);
+      aspect-ratio: 4 / 4.8;
+    }
+
+    .hero-highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .highlight {
+      background: var(--white);
+      border-radius: 18px;
+      border: 1px solid rgba(102,123,115,0.08);
+      padding: 16px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .highlight strong {
+      display: block;
+      color: var(--green-900);
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+    }
+
+    .highlight p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .section-head {
+      max-width: 860px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-head p {
+      max-width: 760px;
+      margin: 0 auto 14px;
+    }
+
+    .pain-grid,
+    .service-grid,
+    .benefit-grid,
+    .price-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .pain-grid { grid-template-columns: repeat(5, 1fr); }
+    .service-grid { grid-template-columns: repeat(2, 1fr); }
+    .benefit-grid { grid-template-columns: repeat(4, 1fr); }
+    .price-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .pain-card,
+    .service-card,
+    .benefit-card,
+    .price-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(102,123,115,0.08);
+      box-shadow: var(--shadow-card);
+      padding: 24px;
+    }
+
+    .pain-card h3,
+    .service-card h3,
+    .benefit-card h3,
+    .price-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+    }
+
+    .pain-card p,
+    .service-card p,
+    .benefit-card p,
+    .price-card p {
+      margin-bottom: 0;
+    }
+
+    .service-card ul,
+    .price-card ul {
+      margin: 16px 0 0;
+      padding-left: 18px;
+      color: var(--text-700);
+    }
+
+    .service-card li + li,
+    .price-card li + li {
+      margin-top: 8px;
+    }
+
+    .service-card.featured {
+      border: 1px solid rgba(197,169,78,0.35);
+      box-shadow: 0 18px 45px rgba(197,169,78,0.12);
+      background: linear-gradient(180deg, #fffef8 0%, #ffffff 100%);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(197,169,78,0.16);
+      color: var(--green-900);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 16px;
+    }
+
+    .story {
+      background: linear-gradient(180deg, #f1ebe2 0%, #f8f5ef 100%);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .story-photo {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      min-height: 520px;
+    }
+
+    .story-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .proof-strip {
+      background: var(--green-900);
+      color: var(--white);
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .proof-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 22px;
+    }
+
+    .proof-card strong {
+      display: block;
+      color: var(--white);
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .proof-card p {
+      color: rgba(255,255,255,0.88);
+      margin: 0;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--green-900), #7f938a 62%, #b9b0c8 100%);
+      color: var(--white);
+    }
+
+    .cta-box {
+      border-radius: 32px;
+      padding: 42px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .cta-box p {
+      color: rgba(255,255,255,0.9);
+      max-width: 760px;
+      margin: 0 auto 16px;
+    }
+
+    .site-footer {
+      background: #4f665c;
+      color: rgba(255,255,255,0.82);
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: .95rem;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .story-grid,
+      .service-grid,
+      .pain-grid,
+      .benefit-grid,
+      .price-grid,
+      .proof-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links { display: none; }
+      .mobile-toggle { display: inline-flex; }
+    }
+
+    @media (max-width: 720px) {
+      .section { padding: 62px 0; }
+      .section-tight { padding: 48px 0; }
+
+      .container {
+        width: min(var(--max), calc(100% - 1.2rem));
+      }
+
+      .nav { min-height: 76px; }
+      .logo img { width: 154px; }
+
+      .hero-grid { gap: 26px; }
+
+      .hero-copy h1 {
+        font-size: clamp(2.2rem, 9vw, 3.2rem);
+        line-height: 1.04;
+      }
+
+      .lead { font-size: 1rem; }
+
+      .btn { width: 100%; }
+      .btn-row { align-items: stretch; }
+
+      .section-head {
+        text-align: left;
+        margin-bottom: 28px;
+      }
+
+      .section-head p {
+        max-width: none;
+        margin-left: 0;
+      }
+
+      .pain-card,
+      .service-card,
+      .benefit-card,
+      .price-card,
+      .proof-card,
+      .cta-box { padding: 22px; }
+
+      .story-photo { min-height: 340px; }
+
+      .footer-grid { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="/" aria-label="Inicio Verónica Salamanca">
+        <img src="../images/Logo fondo transparente.png" alt="Verónica Salamanca" />
+      </a>
+
+      <nav class="nav-links" aria-label="Principal">
+        <a href="/">Inicio</a>
+        <a href="/prevenza/">Prevenza</a>
+        <a href="/equilibrate/">Equilíbrate</a>
+        <a href="/arquenza/">Arquenza</a>
+
+        <div class="has-dropdown">
+          <span class="dropdown-toggle">Más</span>
+          <div class="dropdown-menu">
+            <a href="/aletia/">ALETIA<span>Filosofía, visión y base del universo.</span></a>
+            <a href="/quinta-vibracion/">QUINTA VIBRACIÓN<span>Método de transformación emocional y vibracional.</span></a>
+            <a href="/sobre-mi/">Sobre mí<span>Recorrido profesional, humano y diferencial.</span></a>
+            <a href="/contacto/">Contacto<span>Agenda llamada, WhatsApp o solicitud de información.</span></a>
+          </div>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <div class="mobile-nav">
+        <a href="/">Inicio</a>
+        <a href="/prevenza/">Prevenza</a>
+        <a href="/equilibrate/">Equilíbrate</a>
+        <a href="/arquenza/">Arquenza</a>
+
+        <details class="mobile-submenu">
+          <summary>Más</summary>
+          <div class="mobile-submenu-links">
+            <a href="/aletia/">Aletia</a>
+            <a href="/quinta-vibracion/">Quinta Vibración</a>
+            <a href="/sobre-mi/">Sobre mí</a>
+            <a href="/contacto/">Contacto</a>
+          </div>
+        </details>
+
+        <div class="mobile-contact-row">
+          <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          <a class="btn btn-secondary" href="/contacto/">Agenda una llamada</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">PREVENZA | Empresa</span>
+          <h1>La prevención no es un coste. Es donde más dinero pierde una empresa sin saberlo.</h1>
+          <p class="lead">
+            Conecto administración, operaciones y prevención para que la empresa funcione sin bloqueos, sin errores y sin pérdidas invisibles.
+          </p>
+          <p>
+            PREVENZA nace para empresas que no necesitan más teoría, sino más estructura, más control y menos caos. No entro a reemplazar un ingeniero, un SPA o un director financiero: entro justo donde suele romperse todo entre ellos.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Hablar sobre tu empresa</a>
+            <a class="btn btn-secondary" href="/contacto/">Solicitar diagnóstico</a>
+            <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+          </div>
+
+          <div class="hero-highlights">
+            <div class="highlight">
+              <strong>Operativa</strong>
+              <p>Del trabajo que entra al cobro final.</p>
+            </div>
+            <div class="highlight">
+              <strong>Prevención</strong>
+              <p>PRL, CAE y control documental con criterio.</p>
+            </div>
+            <div class="highlight">
+              <strong>Rentabilidad</strong>
+              <p>Menos fugas, menos desorden, más estabilidad.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img
+            class="hero-photo"
+            src="../images/P1030816.JPG"
+            alt="Verónica Salamanca en entorno profesional con portátil"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Problemas que soluciona</span>
+          <h2>Si tu empresa funciona apagando fuegos, PREVENZA tiene sentido</h2>
+          <p>
+            Hay empresas que cumplen en apariencia, pero por dentro pierden dinero, tiempo y energía en bloqueos que nadie está coordinando de verdad.
+          </p>
+        </div>
+
+        <div class="pain-grid">
+          <div class="pain-card">
+            <h3>Sobrecarga administrativa</h3>
+            <p>La oficina va saturada, todo depende de pocas personas y cada incidencia arrastra a las demás.</p>
+          </div>
+
+          <div class="pain-card">
+            <h3>Desorden operativo</h3>
+            <p>Los trabajos entran, se ejecutan y se facturan sin una coordinación clara entre áreas.</p>
+          </div>
+
+          <div class="pain-card">
+            <h3>Falta de control real</h3>
+            <p>No se ve dónde se está escapando el dinero ni qué parte del caos es estructural.</p>
+          </div>
+
+          <div class="pain-card">
+            <h3>PRL que no aporta valor</h3>
+            <p>La prevención se vive como carga, papeleo o obligación, no como una herramienta de estabilidad.</p>
+          </div>
+
+          <div class="pain-card">
+            <h3>Exigencias futuras</h3>
+            <p>Clientes, normativa y sostenibilidad empiezan a pedir cosas para las que la pyme no está preparada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Servicios PREVENZA</span>
+          <h2>Servicios pensados para ordenar, sostener y prevenir</h2>
+          <p>
+            No todos los negocios necesitan el mismo nivel de intervención. Por eso PREVENZA combina servicios de entrada, soporte parcial y dirección externalizada.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="tag">Servicio de entrada</span>
+            <h3>Diagnóstico y ajuste operativo</h3>
+            <p>
+              Revisión del funcionamiento real de la empresa para detectar bloqueos, desorden, sobrecarga y fugas de dinero antes de plantear cualquier solución mayor.
+            </p>
+            <ul>
+              <li>Revisión de administración, operativa y prevención de base</li>
+              <li>Detección de puntos críticos y riesgos organizativos</li>
+              <li>Recomendaciones prácticas y priorizadas</li>
+              <li>Ideal para saber por dónde empezar</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Soporte operativo y administrativo</h3>
+            <p>
+              Apoyo estructurado para empresas que necesitan descargar carga administrativa, coordinación documental y seguimiento diario sin externalizar la dirección completa.
+            </p>
+            <ul>
+              <li>Gestión administrativa clave</li>
+              <li>Apoyo en coordinación operativa</li>
+              <li>PRL y CAE documental</li>
+              <li>Control de permisos, incidencias y relaciones básicas</li>
+            </ul>
+          </article>
+
+          <article class="service-card featured">
+            <span class="tag">Servicio principal</span>
+            <h3>Dirección operativa y preventiva externalizada</h3>
+            <p>
+              El núcleo de PREVENZA. Me integro como una figura clave que conecta administración, operaciones y prevención para que todo funcione desde la entrada del trabajo hasta el cobro.
+            </p>
+            <ul>
+              <li>Dirección del área administrativa</li>
+              <li>Coordinación completa del flujo operativo</li>
+              <li>Supervisión de oficina técnica</li>
+              <li>PRL y CAE interna y externa</li>
+              <li>Interlocución con clientes, proveedores y logística</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Control preventivo y cumplimiento operativo</h3>
+            <p>
+              Para empresas que necesitan tener la prevención bajo control sin convertirla en un problema más dentro del día a día.
+            </p>
+            <ul>
+              <li>Gestión PRL interna</li>
+              <li>Coordinación CAE con clientes</li>
+              <li>Control documental y vencimientos</li>
+              <li>Coordinación con SPA</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Prevención estratégica y sostenibilidad</h3>
+            <p>
+              Preparación práctica para exigencias actuales y futuras en sostenibilidad, cadena de valor y requisitos de clientes, sin convertir la pyme en una máquina burocrática.
+            </p>
+            <ul>
+              <li>Diagnóstico de exposición a exigencias ESG</li>
+              <li>Identificación de riesgos futuros y brechas</li>
+              <li>Preparación proporcional y adaptada</li>
+              <li>Acompañamiento práctico, no consultoría decorativa</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <h3>Qué no es PREVENZA</h3>
+            <p>
+              Precisamente por eso funciona: no invade lo que no le corresponde y se centra en conectar lo que suele quedar descoordinado.
+            </p>
+            <ul>
+              <li>No sustituye a ingeniería ni firma proyectos</li>
+              <li>No reemplaza un SPA</li>
+              <li>No es dirección financiera pura</li>
+              <li>No es consultoría de procesos abstracta</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section">
+      <div class="container story-grid">
+        <div class="story-photo">
+          <img src="../images/P1030010.JPG" alt="Verónica Salamanca en una imagen profesional y cercana" />
+        </div>
+
+        <div>
+          <span class="eyebrow">Diferencial PREVENZA</span>
+          <h2>No solo trabajo la prevención legal. Trabajo la prevención del desorden, del desgaste y de la pérdida de dinero.</h2>
+          <p>
+            Ese es el verdadero diferencial de PREVENZA. No se queda en “cumplir”, sino en detectar lo que está debilitando la empresa por dentro: saturación, descoordinación, errores repetidos, falta de control y costes invisibles.
+          </p>
+          <p>
+            Mi experiencia me permite entrar con una visión híbrida: técnica, operativa y organizativa. Eso es justo lo que muchas empresas no tienen internamente, aunque lo necesiten.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Cuéntame tu caso</a>
+            <a class="btn btn-ghost" href="/contacto/">Solicitar diagnóstico</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Qué gana la empresa</span>
+          <h2>Lo que cambia cuando el desorden deja de mandar</h2>
+        </div>
+
+        <div class="benefit-grid">
+          <div class="benefit-card">
+            <h3>Más control</h3>
+            <p>Saber qué está pasando y dónde se están generando bloqueos.</p>
+          </div>
+
+          <div class="benefit-card">
+            <h3>Menos dependencia</h3>
+            <p>Evitar que todo descanse sobre pocas personas saturadas.</p>
+          </div>
+
+          <div class="benefit-card">
+            <h3>Menos fugas</h3>
+            <p>Reducir costes invisibles derivados del desorden y la mala coordinación.</p>
+          </div>
+
+          <div class="benefit-card">
+            <h3>Más tranquilidad</h3>
+            <p>Que la empresa funcione sin vivir permanentemente en modo urgencia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-strip section-tight">
+      <div class="container">
+        <div class="section-head" style="color:#fff;">
+          <span class="eyebrow" style="background: rgba(255,255,255,0.14); color:#fff;">Referencia de valor</span>
+          <h2 style="color:#fff;">PREVENZA no compite por precio. Compite por impacto.</h2>
+          <p style="color: rgba(255,255,255,0.88);">
+            El valor no está en “hacer tareas”, sino en lo que se evita cuando una empresa gana orden, criterio y coordinación real.
+          </p>
+        </div>
+
+        <div class="proof-grid">
+          <div class="proof-card">
+            <strong>Desde 1.200 €</strong>
+            <p>Diagnóstico y ajuste operativo</p>
+          </div>
+
+          <div class="proof-card">
+            <strong>Desde 1.500 €/mes</strong>
+            <p>Soporte operativo y administrativo</p>
+          </div>
+
+          <div class="proof-card">
+            <strong>Desde 3.500 €/mes</strong>
+            <p>Dirección operativa y preventiva externalizada</p>
+          </div>
+
+          <div class="proof-card">
+            <strong>Desde 900 €</strong>
+            <p>PRL, CAE y cumplimiento operativo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Cómo se trabaja</span>
+          <h2>Una forma simple de avanzar</h2>
+          <p>
+            En PREVENZA el objetivo es que sepas rápido si hay encaje y qué nivel de intervención necesita tu empresa.
+          </p>
+        </div>
+
+        <div class="price-grid">
+          <div class="price-card">
+            <h3>1. Revisión inicial</h3>
+            <p>Me cuentas tu situación y detectamos si el problema es documental, operativo o estructural.</p>
+          </div>
+
+          <div class="price-card">
+            <h3>2. Diagnóstico o propuesta</h3>
+            <p>Definimos si conviene empezar por un diagnóstico o si la empresa ya necesita una intervención recurrente.</p>
+          </div>
+
+          <div class="price-card">
+            <h3>3. Implementación</h3>
+            <p>Se entra justo donde hace falta: soporte, dirección externalizada o preparación estratégica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section">
+      <div class="container">
+        <div class="cta-box">
+          <span class="eyebrow" style="background: rgba(255,255,255,0.12); color:#fff;">Siguiente paso</span>
+          <h2 style="color:#fff; margin-top:14px;">Si tu empresa necesita orden real, hablemos claro desde el principio</h2>
+          <p>
+            Puedes escribirme directamente por WhatsApp para contarme tu situación o solicitar un diagnóstico si ya sabes que lo que necesitas es poner estructura donde ahora solo hay carga, tensión y desorden.
+          </p>
+          <div class="btn-row" style="justify-content:center;">
+            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+            <a class="btn btn-secondary" href="/contacto/">Solicitar diagnóstico</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p style="margin:0; color: rgba(255,255,255,0.82);">© Verónica Salamanca. Todos los derechos reservados.</p>
+
+      <div class="footer-links">
+        <a href="/">Inicio</a>
+        <a href="/sobre-mi/">Sobre mí</a>
+        <a href="/contacto/">Contacto</a>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/privacidad/">Privacidad</a>
+        <a href="/cookies/">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileToggle = document.getElementById("mobileToggle");
+    const mobilePanel = document.getElementById("mobilePanel");
+
+    if (mobileToggle && mobilePanel) {
+      mobileToggle.addEventListener("click", () => {
+        const isOpen = mobilePanel.classList.toggle("open");
+        mobileToggle.classList.toggle("active", isOpen);
+        mobileToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        document.body.classList.toggle("menu-open", isOpen);
+      });
+
+      mobilePanel.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobilePanel.classList.remove("open");
+          mobileToggle.classList.remove("active");
+          mobileToggle.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("menu-open");
+        });
+      });
+    }
+  </script>
+</body>
+</html>
