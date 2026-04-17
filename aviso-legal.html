@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aviso legal | Verónica Salamanca</title>
+  <meta
+    name="description"
+    content="Aviso legal del sitio web www.veronicasalamanca.com."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --green-900: #667b73;
+      --green-800: #7f938a;
+      --mint-500: #a7c6b7;
+      --lilac-500: #b9b0c8;
+      --gold-500: #c5a94e;
+      --cream-50: #faf8f4;
+      --cream-100: #f3eee7;
+      --text-900: #181818;
+      --text-700: #4e4e4e;
+      --text-500: #7a7a7a;
+      --white: #ffffff;
+      --shadow-soft: 0 18px 45px rgba(102, 123, 115, 0.14);
+      --shadow-card: 0 12px 26px rgba(24, 24, 24, 0.07);
+      --radius-xl: 32px;
+      --radius-lg: 22px;
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", system-ui, sans-serif;
+      color: var(--text-900);
+      background: var(--cream-50);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(102, 123, 115, 0.98);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo img {
+      width: 180px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: var(--white);
+      font-family: "Cinzel", serif;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 72px 0 42px;
+      background:
+        radial-gradient(circle at top left, rgba(167,198,183,0.14), transparent 28%),
+        linear-gradient(180deg, #faf8f4 0%, #f2ece4 100%);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(167, 198, 183, 0.18);
+      color: var(--green-900);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1, h2 {
+      font-family: "Cinzel", serif;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin: 0 0 16px;
+      color: var(--text-900);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4.4rem);
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--text-700);
+    }
+
+    .intro {
+      max-width: 860px;
+    }
+
+    .legal-wrap {
+      padding: 24px 0 80px;
+    }
+
+    .legal-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(102,123,115,0.08);
+      box-shadow: var(--shadow-card);
+      padding: 34px;
+    }
+
+    .legal-section + .legal-section {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(102,123,115,0.10);
+    }
+
+    ul {
+      margin: 0 0 16px;
+      padding-left: 20px;
+      color: var(--text-700);
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .highlight {
+      background: rgba(185,176,200,0.10);
+      border: 1px solid rgba(185,176,200,0.18);
+      padding: 16px 18px;
+      border-radius: 16px;
+      margin-top: 14px;
+    }
+
+    .site-footer {
+      background: #4f665c;
+      color: rgba(255,255,255,0.82);
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        padding: 56px 0 30px;
+      }
+
+      .legal-card {
+        padding: 22px;
+      }
+
+      .logo img {
+        width: 154px;
+      }
+
+      .nav {
+        min-height: 76px;
+      }
+
+      .footer-grid {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="Inicio Verónica Salamanca">
+        <img src="images/Logo fondo transparente.png" alt="Verónica Salamanca" />
+      </a>
+
+      <nav class="nav-links" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="prevenza.html">Prevenza</a>
+        <a href="equilibrate.html">Equilíbrate</a>
+        <a href="arquenza.html">Arquenza</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container intro">
+        <span class="eyebrow">Información legal</span>
+        <h1>Aviso legal</h1>
+        <p>
+          En cumplimiento del deber de información recogido en la normativa aplicable, se facilitan a continuación los datos identificativos de la entidad titular de este sitio web, así como las condiciones generales de uso del mismo.
+        </p>
+      </div>
+    </section>
+
+    <section class="legal-wrap">
+      <div class="container">
+        <div class="legal-card">
+
+          <section class="legal-section">
+            <h2>1. Datos identificativos</h2>
+            <p><strong>Entidad titular del sitio web:</strong> Arqenza OÜ</p>
+            <p><strong>Marca visible / nombre comercial:</strong> Verónica Salamanca</p>
+            <p><strong>Código de registro:</strong> 17456856</p>
+            <p><strong>Sitio web:</strong> www.veronicasalamanca.com</p>
+            <p><strong>Correo electrónico general:</strong> escribenos@veronicasalamanca.com</p>
+            <p><strong>Correo electrónico administrativo:</strong> administracion@veronicasalamanca.com</p>
+            <p><strong>Otros correos habilitados en el dominio:</strong> aletia@veronicasalamanca.com, prevenza@veronicasalamanca.com, arquenza@veronicasalamanca.com, equilibrate@veronicasalamanca.com, soporte@veronicasalamanca.com, prensa@veronicasalamanca.com, colaboraciones@veronicasalamanca.com</p>
+            <p><strong>Teléfono de contacto:</strong> 655 355 826</p>
+            <p><strong>Domicilio profesional:</strong> Harju maakond, Tallinn, Kesklinna linnaosa, Ahtri tn 12, 15551</p>
+            <p><strong>Actividad:</strong> prestación de servicios de consultoría, acompañamiento, mentoría, formación y otros servicios relacionados con las líneas PREVENZA, EQUILÍBRATE y ARQUENZA.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>2. Objeto</h2>
+            <p>
+              El presente sitio web tiene por objeto ofrecer información sobre la actividad profesional y comercial de Verónica Salamanca, las líneas de trabajo asociadas a la marca, contenidos informativos, canales de contacto y, en su caso, servicios, programas, productos o recursos relacionados.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>3. Condiciones de uso</h2>
+            <p>
+              El acceso y uso de este sitio web atribuye la condición de usuario e implica la aceptación plena y sin reservas de las presentes condiciones de uso.
+            </p>
+            <p>
+              La persona usuaria se compromete a hacer un uso adecuado de los contenidos y servicios ofrecidos a través del sitio web y a no emplearlos para:
+            </p>
+            <ul>
+              <li>Realizar actividades ilícitas, ilegales o contrarias a la buena fe y al orden público.</li>
+              <li>Difundir contenidos o propaganda de carácter discriminatorio, violento, ofensivo o contrario a la ley.</li>
+              <li>Provocar daños en los sistemas físicos o lógicos del sitio web, de sus proveedores o de terceras personas.</li>
+              <li>Intentar acceder, utilizar o manipular datos de la entidad titular, de otros usuarios o de terceros sin autorización.</li>
+            </ul>
+          </section>
+
+          <section class="legal-section">
+            <h2>4. Propiedad intelectual e industrial</h2>
+            <p>
+              Todos los contenidos de este sitio web, incluyendo, a título enunciativo y no limitativo, textos, imágenes, diseños, logotipos, estructura, código fuente, documentación, descargables, marcas, nombres comerciales y cualquier otro elemento susceptible de protección, son titularidad de Arqenza OÜ o bien se dispone de los derechos o autorizaciones necesarias para su uso.
+            </p>
+            <p>
+              Queda prohibida la reproducción, distribución, comunicación pública, transformación, puesta a disposición o cualquier otra forma de explotación, total o parcial, de los contenidos de este sitio web sin autorización previa y expresa de la entidad titular.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>5. Responsabilidad</h2>
+            <p>
+              La entidad titular no se responsabiliza de los daños o perjuicios que pudieran derivarse del uso de la información contenida en este sitio web ni de la falta de disponibilidad o continuidad del funcionamiento del sitio por causas técnicas, de mantenimiento, errores del servidor, ataques externos, interrupciones de red u otras circunstancias ajenas a su control.
+            </p>
+            <p>
+              Tampoco se garantiza la ausencia de virus u otros elementos que pudieran producir alteraciones en los sistemas informáticos de la persona usuaria, aunque se adoptarán, en la medida de lo posible, las medidas técnicas razonables para evitarlo.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>6. Enlaces externos</h2>
+            <p>
+              Este sitio web puede contener enlaces a páginas externas de terceros. La entidad titular no asume responsabilidad alguna por los contenidos, políticas, disponibilidad o prácticas de dichos sitios externos, ya que no tiene control directo sobre ellos.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>7. Exclusión de garantías por contenidos informativos</h2>
+            <p>
+              Los contenidos de esta web tienen carácter informativo, divulgativo o descriptivo y no constituyen, salvo que expresamente se indique lo contrario, asesoramiento jurídico, médico, psicológico, sanitario o de cualquier otra naturaleza regulada.
+            </p>
+            <p>
+              La información ofrecida en relación con servicios, métodos, procesos o acompañamientos no sustituye en ningún caso la intervención de profesionales legalmente habilitados cuando esta resulte necesaria.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>8. Servicios y contratación</h2>
+            <p>
+              La información publicada en este sitio web sobre servicios, programas, precios o condiciones tiene carácter orientativo o informativo, salvo que se indique expresamente lo contrario.
+            </p>
+            <p>
+              La contratación de servicios o productos podrá estar sujeta a condiciones específicas adicionales, que deberán ser aceptadas de forma expresa por la persona usuaria o cliente antes de formalizar cualquier relación contractual.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>9. Protección de datos personales</h2>
+            <p>
+              El tratamiento de los datos personales que puedan recabarse a través de este sitio web se regirá por lo dispuesto en la correspondiente Política de Privacidad, que forma parte integrante de este sitio web.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>10. Uso de cookies</h2>
+            <p>
+              Este sitio web podrá utilizar cookies propias y/o de terceros con fines técnicos, analíticos o de personalización. La información detallada sobre su uso deberá recogerse en la correspondiente Política de Cookies, en caso de que resulte necesaria conforme a la normativa aplicable.
+            </p>
+
+            <div class="highlight">
+              <p><strong>Importante:</strong> si instalas Google Analytics, Meta Pixel, formularios externos, YouTube incrustado o herramientas similares, probablemente necesitarás política de cookies y banner de consentimiento.</p>
+            </div>
+          </section>
+
+          <section class="legal-section">
+            <h2>11. Modificaciones</h2>
+            <p>
+              La entidad titular se reserva el derecho a modificar, actualizar o eliminar, en cualquier momento y sin previo aviso, los contenidos del presente sitio web, así como el presente aviso legal, con el fin de adaptarlo a novedades legislativas, jurisprudenciales, técnicas o de funcionamiento del sitio.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>12. Legislación aplicable y jurisdicción</h2>
+            <p>
+              El presente aviso legal se regirá por la normativa que resulte aplicable según la actividad desarrollada y la jurisdicción competente conforme a derecho.
+            </p>
+            <p>
+              Para la resolución de cualquier conflicto o controversia que pudiera derivarse del acceso o uso de este sitio web, las partes se someterán a los juzgados y tribunales que resulten competentes conforme a la normativa aplicable.
+            </p>
+          </section>
+
+          <section class="legal-section">
+            <h2>13. Contacto</h2>
+            <p>
+              Si tienes cualquier duda sobre este aviso legal, puedes contactar a través de escribenos@veronicasalamanca.com o mediante los canales habilitados en la página de contacto.
+            </p>
+          </section>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p style="margin:0; color: rgba(255,255,255,0.82);">© Verónica Salamanca. Todos los derechos reservados.</p>
+
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="privacidad.html">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
