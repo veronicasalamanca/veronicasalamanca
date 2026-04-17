@@ -1,1 +1,1074 @@
-<html><head><title>Home</title></head><body>Home</body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verónica Salamanca | Prevención, estructura y equilibrio</title>
+  <meta
+    name="description"
+    content="Prevención, estructura y equilibrio para personas, familias y empresas. Descubre Prevenza, Equilíbrate y Arquenza."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.veronicasalamanca.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Verónica Salamanca" />
+  <meta property="og:title" content="Verónica Salamanca | Prevención, estructura y equilibrio" />
+  <meta property="og:description" content="Prevención, estructura y equilibrio para personas, familias y empresas. Descubre Prevenza, Equilíbrate y Arquenza." />
+  <meta property="og:url" content="https://www.veronicasalamanca.com/" />
+  <meta property="og:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Verónica Salamanca | Prevención, estructura y equilibrio" />
+  <meta name="twitter:description" content="Prevención, estructura y equilibrio para personas, familias y empresas. Descubre Prevenza, Equilíbrate y Arquenza." />
+  <meta name="twitter:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --green-900: #667b73;
+      --green-800: #7f938a;
+      --mint-500: #a7c6b7;
+      --mint-300: #dbe9e2;
+      --lilac-500: #b9b0c8;
+      --lilac-300: #e7e2ef;
+      --gold-500: #c5a94e;
+      --gold-300: #ead99c;
+      --cream-50: #faf8f4;
+      --cream-100: #f3eee7;
+      --sand-200: #e7ddd1;
+      --blush-300: #d9b6b5;
+      --text-900: #181818;
+      --text-700: #4e4e4e;
+      --text-500: #7a7a7a;
+      --white: #ffffff;
+      --shadow-soft: 0 18px 45px rgba(102, 123, 115, 0.14);
+      --shadow-card: 0 12px 26px rgba(24, 24, 24, 0.07);
+      --radius-xl: 32px;
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --max: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", system-ui, sans-serif;
+      color: var(--text-900);
+      background: var(--cream-50);
+      line-height: 1.55;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .section { padding: 84px 0; }
+    .section-tight { padding: 62px 0; }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(167, 198, 183, 0.18);
+      color: var(--green-900);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3, .nav-links, .dropdown-menu a, .mobile-nav a, .mobile-submenu summary {
+      font-family: "Cinzel", serif;
+      letter-spacing: -0.02em;
+      line-height: 1.02;
+      margin: 0 0 16px;
+    }
+
+    h1 { font-size: clamp(2.7rem, 6vw, 5.6rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3.8rem); }
+    h3 { font-size: clamp(1.35rem, 2.4vw, 2.2rem); }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--text-700);
+      font-size: 1rem;
+    }
+
+    .lead { font-size: 1.1rem; }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform .2s ease, opacity .2s ease, background .2s ease, border-color .2s ease;
+      text-align: center;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--green-900);
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-secondary {
+      background: var(--gold-500);
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-tertiary {
+      background: var(--lilac-500);
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(102, 123, 115, 0.22);
+      color: var(--green-900);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(102, 123, 115, 0.98);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo img {
+      width: 180px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--white);
+      font-size: 0.96rem;
+      margin: 0;
+    }
+
+    .nav-links > a,
+    .dropdown-toggle {
+      margin: 0;
+      color: var(--white);
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .has-dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown-toggle::after {
+      content: "▾";
+      margin-left: 8px;
+      font-size: 0.78rem;
+      font-family: sans-serif;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 280px;
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(102,123,115,0.12);
+      padding: 14px;
+      display: none;
+      z-index: 20;
+    }
+
+    .has-dropdown:hover .dropdown-menu,
+    .has-dropdown:focus-within .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 12px;
+      border-radius: 12px;
+      color: var(--green-900);
+      font-size: 0.96rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .dropdown-menu a span {
+      display: block;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.84rem;
+      color: var(--text-500);
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    .dropdown-menu a:hover { background: var(--cream-100); }
+
+    .mobile-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: transparent;
+      border-radius: 14px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      position: relative;
+    }
+
+    .mobile-toggle span,
+    .mobile-toggle::before,
+    .mobile-toggle::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 99px;
+      transition: transform .25s ease, opacity .25s ease;
+      position: absolute;
+    }
+
+    .mobile-toggle span { transform: translateY(0); }
+    .mobile-toggle::before { transform: translateY(-7px); }
+    .mobile-toggle::after { transform: translateY(7px); }
+
+    .mobile-toggle.active span { opacity: 0; }
+    .mobile-toggle.active::before { transform: rotate(45deg); }
+    .mobile-toggle.active::after { transform: rotate(-45deg); }
+
+    .mobile-panel {
+      display: none;
+      position: fixed;
+      inset: 76px 0 0 0;
+      background: rgba(250, 248, 244, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 90;
+      overflow-y: auto;
+      border-top: 1px solid rgba(102, 123, 115, 0.12);
+      padding: 18px 0 24px;
+    }
+
+    .mobile-panel.open { display: block; }
+
+    .mobile-nav {
+      width: min(var(--max), calc(100% - 1.2rem));
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mobile-nav > a,
+    .mobile-submenu summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white);
+      color: var(--green-900);
+      border: 1px solid rgba(102,123,115,0.12);
+      border-radius: 16px;
+      padding: 16px 18px;
+      font-size: 1.05rem;
+      box-shadow: var(--shadow-card);
+      margin: 0;
+    }
+
+    .mobile-submenu summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .mobile-submenu summary::-webkit-details-marker { display: none; }
+
+    .mobile-submenu[open] summary {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .mobile-submenu-links {
+      background: var(--white);
+      border: 1px solid rgba(102,123,115,0.12);
+      border-top: 0;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      padding: 6px 10px 12px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .mobile-submenu-links a {
+      display: block;
+      padding: 12px 10px;
+      border-radius: 12px;
+      color: var(--green-900);
+      font-family: "Montserrat", sans-serif;
+      font-size: .96rem;
+      font-weight: 600;
+    }
+
+    .mobile-submenu-links a + a { margin-top: 4px; }
+    .mobile-submenu-links a:hover { background: var(--cream-100); }
+
+    .mobile-contact-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top left, rgba(197,169,78,0.12), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(185,176,200,0.14), transparent 25%),
+        linear-gradient(180deg, #faf8f4 0%, #f2ece4 100%);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .hero-photo-wrap {
+      position: relative;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+    }
+
+    .hero-photo {
+      width: min(100%, 560px);
+      border-radius: var(--radius-xl);
+      object-fit: cover;
+      box-shadow: var(--shadow-soft);
+      aspect-ratio: 4 / 5;
+    }
+
+    .hero-orbit {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(102,123,115,0.1);
+      box-shadow: var(--shadow-soft);
+      padding: 18px;
+    }
+
+    .hero-orbit img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .orbit-one { left: 0; top: 46px; }
+    .orbit-two { right: 0; top: 56px; }
+    .orbit-three { right: 18px; bottom: 36px; }
+
+    .hero-actions {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .hero-action {
+      border-radius: 20px;
+      padding: 18px 16px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(102,123,115,0.08);
+    }
+
+    .hero-action strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      color: var(--green-900);
+    }
+
+    .hero-action p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .hero-action.one { background: rgba(167,198,183,0.18); }
+    .hero-action.two { background: rgba(185,176,200,0.18); }
+    .hero-action.three { background: rgba(217,193,118,0.22); }
+
+    .section-head {
+      max-width: 860px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-head p {
+      max-width: 760px;
+      margin: 0 auto 14px;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .how-card {
+      background: linear-gradient(180deg, var(--white), #fbf8f3);
+      border-radius: 22px;
+      border: 1px solid rgba(102,123,115,0.08);
+      box-shadow: var(--shadow-card);
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .how-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -30px -30px auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(185,176,200,0.10);
+    }
+
+    .how-step {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--green-900);
+      color: var(--white);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .cards-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(102,123,115,0.08);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .card-media {
+      aspect-ratio: 16/10;
+      background: linear-gradient(180deg, var(--cream-100), var(--sand-200));
+      overflow: hidden;
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card-logo {
+      width: 92px;
+      height: auto;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--text-700);
+    }
+
+    .card li + li { margin-top: 8px; }
+
+    .card-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 4px;
+      flex-wrap: wrap;
+    }
+
+    .price-tag {
+      color: var(--green-900);
+      font-weight: 800;
+    }
+
+    .story {
+      background: linear-gradient(180deg, #f1ebe2 0%, #f8f5ef 100%);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: .88fr 1.12fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .story-visual .top-photo {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      min-height: 520px;
+    }
+
+    .story-visual .top-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .story-copy p {
+      max-width: 62ch;
+    }
+
+    .about-strip { background: var(--cream-100); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .about-header {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .about-header img {
+      width: min(100%, 420px);
+      border-radius: 24px;
+      box-shadow: var(--shadow-soft);
+      object-fit: cover;
+    }
+
+    .about-copy {
+      background: var(--green-900);
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about-copy h2,
+    .about-copy h3 { color: var(--white); }
+
+    .about-copy p { color: rgba(255,255,255,0.92); }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--green-900), #7f938a 62%, #b9b0c8 100%);
+      color: var(--white);
+    }
+
+    .cta-box {
+      border-radius: 32px;
+      padding: 42px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .cta-box p {
+      color: rgba(255,255,255,0.9);
+      max-width: 760px;
+      margin: 0 auto 16px;
+    }
+
+    .site-footer {
+      background: #4f665c;
+      color: rgba(255,255,255,0.82);
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: .95rem;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .story-grid,
+      .about-grid,
+      .cards-3,
+      .how-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links { display: none; }
+      .mobile-toggle { display: inline-flex; }
+      .hero-orbit { display: none; }
+      .hero-photo-wrap { order: -1; }
+    }
+
+    @media (max-width: 720px) {
+      .section { padding: 62px 0; }
+      .section-tight { padding: 48px 0; }
+
+      .container {
+        width: min(var(--max), calc(100% - 1.2rem));
+      }
+
+      .nav { min-height: 76px; }
+      .logo img { width: 154px; }
+
+      .hero-grid { gap: 26px; }
+
+      .hero-copy h1 {
+        font-size: clamp(2.2rem, 9vw, 3.2rem);
+        line-height: 1.04;
+      }
+
+      .lead { font-size: 1rem; }
+      .hero-photo { width: 100%; aspect-ratio: 4 / 4.7; }
+
+      .btn { width: 100%; }
+      .btn-row { align-items: stretch; }
+
+      .section-head {
+        text-align: left;
+        margin-bottom: 28px;
+      }
+
+      .section-head p {
+        max-width: none;
+        margin-left: 0;
+      }
+
+      .how-grid,
+      .cards-3 { gap: 16px; }
+
+      .how-card,
+      .card-body,
+      .about-copy,
+      .cta-box { padding: 22px; }
+
+      .story-visual .top-photo { min-height: 340px; }
+
+      .footer-grid { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="/" aria-label="Inicio Verónica Salamanca">
+        <img src="images/Logo fondo transparente.png" alt="Verónica Salamanca" />
+      </a>
+
+      <nav class="nav-links" aria-label="Principal">
+        <a href="/">Inicio</a>
+        <a href="/prevenza/">Prevenza</a>
+        <a href="/equilibrate/">Equilíbrate</a>
+        <a href="/arquenza/">Arquenza</a>
+
+        <div class="has-dropdown">
+          <span class="dropdown-toggle">Más</span>
+          <div class="dropdown-menu">
+            <a href="/aletia/">ALETIA<span>Filosofía, visión y base del universo.</span></a>
+            <a href="/quinta-vibracion/">QUINTA VIBRACIÓN<span>Método de transformación emocional y vibracional.</span></a>
+            <a href="/sobre-mi/">Sobre mí<span>Recorrido profesional, humano y diferencial.</span></a>
+            <a href="/contacto/">Contacto<span>Agenda llamada, WhatsApp o solicitud de información.</span></a>
+          </div>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <div class="mobile-nav">
+        <a href="/">Inicio</a>
+        <a href="/prevenza/">Prevenza</a>
+        <a href="/equilibrate/">Equilíbrate</a>
+        <a href="/arquenza/">Arquenza</a>
+
+        <details class="mobile-submenu">
+          <summary>Más</summary>
+          <div class="mobile-submenu-links">
+            <a href="/aletia/">Aletia</a>
+            <a href="/quinta-vibracion/">Quinta Vibración</a>
+            <a href="/sobre-mi/">Sobre mí</a>
+            <a href="/contacto/">Contacto</a>
+          </div>
+        </details>
+
+        <div class="mobile-contact-row">
+          <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          <a class="btn btn-secondary" href="/contacto/">Agenda una llamada</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Prevención, estructura y equilibrio</span>
+          <h1>Prevención, estructura y equilibrio para personas y empresas.</h1>
+          <p class="lead">
+            Integro lo operativo, lo humano y lo invisible para evitar el caos antes de que ocurra.
+          </p>
+          <p>
+            Bajo mi marca personal conviven tres líneas claras: <strong>EQUILÍBRATE</strong>, <strong>ARQUENZA</strong> y <strong>PREVENZA</strong>. Cada una responde a una necesidad distinta, pero todas nacen de la misma visión: ordenar, sostener y prevenir antes de que el impacto sea mayor.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-secondary" href="/contacto/">Agenda una llamada</a>
+            <a class="btn btn-ghost" href="/sobre-mi/">Más sobre mí</a>
+          </div>
+
+          <div class="hero-actions">
+            <a class="hero-action one" href="/equilibrate/">
+              <strong>Personas</strong>
+              <p>Organización personal y energética con Equilíbrate.</p>
+            </a>
+            <a class="hero-action two" href="/arquenza/">
+              <strong>Familias</strong>
+              <p>Procesos de cambio y reconstrucción desde Arquenza.</p>
+            </a>
+            <a class="hero-action three" href="/prevenza/">
+              <strong>Empresas</strong>
+              <p>Orden, control y rentabilidad desde Prevenza.</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <div class="hero-orbit orbit-one">
+            <img src="images/Logo Equilibrate.jpeg" alt="Logo Equilíbrate" />
+          </div>
+          <div class="hero-orbit orbit-two">
+            <img src="images/Logo Quintavibracion.png" alt="Logo Quinta Vibración" />
+          </div>
+          <div class="hero-orbit orbit-three">
+            <img src="images/Logo Aletia.png" alt="Logo Aletia" />
+          </div>
+
+          <img
+            class="hero-photo"
+            src="images/P1030816.JPG"
+            alt="Verónica Salamanca en un entorno profesional con portátil"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="section-head" style="margin-bottom: 32px;">
+          <span class="eyebrow">Cómo suelo trabajar</span>
+          <h2>Claridad primero. Después, decisión.</h2>
+          <p>
+            La web está pensada para posicionar, segmentar y no generar duda: entiendes rápido qué hago, dónde encajas y qué paso tiene más sentido para ti.
+          </p>
+        </div>
+
+        <div class="how-grid">
+          <div class="how-card">
+            <span class="how-step">1</span>
+            <h3>Te ubicas</h3>
+            <p>Identificas si necesitas ayuda en organización personal, familia o empresa.</p>
+          </div>
+
+          <div class="how-card">
+            <span class="how-step">2</span>
+            <h3>Entiendes</h3>
+            <p>Lees el enfoque y ves con claridad qué línea responde a tu situación.</p>
+          </div>
+
+          <div class="how-card">
+            <span class="how-step">3</span>
+            <h3>Contactas</h3>
+            <p>Escribes por WhatsApp o agendas una llamada para ir directos a lo importante.</p>
+          </div>
+
+          <div class="how-card">
+            <span class="how-step">4</span>
+            <h3>Avanzas</h3>
+            <p>Definimos si hay encaje y la mejor vía de trabajo según tu objetivo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lineas" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Las 3 líneas</span>
+          <h2>Qué hago y para quién lo hago</h2>
+          <p>
+            Cada línea tiene su propio lenguaje, su propia promesa y su propia forma de acompañar. Lo importante es que puedas entrar directamente por el lugar correcto.
+          </p>
+        </div>
+
+        <div class="cards-3">
+          <article class="card">
+            <div class="card-media">
+              <img src="images/P1020984.JPG" alt="Verónica Salamanca con péndulo" />
+            </div>
+            <div class="card-body">
+              <img class="card-logo" src="images/Logo Equilibrate.jpeg" alt="Logo Equilíbrate" />
+              <h3>EQUILÍBRATE</h3>
+              <p><strong>Sistema de organización personal y energética.</strong></p>
+              <p>Sostener la vida sin romperse: estructura, emoción y energía para volver a ti.</p>
+              <ul>
+                <li>Mentoría anual</li>
+                <li>Membresía grupal</li>
+                <li>Sesión individual</li>
+                <li>Agenda Equilíbrate</li>
+              </ul>
+              <div class="card-footer">
+                <span class="price-tag">Desde 45 €</span>
+                <a class="btn btn-ghost" href="/equilibrate/">Ver Equilíbrate</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="images/P1030604.JPG" alt="Verónica Salamanca en imagen cercana y emocional" />
+            </div>
+            <div class="card-body">
+              <img class="card-logo" src="images/Logo Quintavibracion.png" alt="Logo Quinta Vibración" />
+              <h3>ARQUENZA</h3>
+              <p><strong>Transformación emocional y familiar.</strong></p>
+              <p>Procesos de cambio y reconstrucción para familias que necesitan sostén real y mirada consciente.</p>
+              <ul>
+                <li>Programa de separación</li>
+                <li>Talleres experienciales</li>
+                <li>Libro</li>
+                <li>Base: Aletia + Quinta Vibración</li>
+              </ul>
+              <div class="card-footer">
+                <span class="price-tag">Desde 14,99 €</span>
+                <a class="btn btn-ghost" href="/arquenza/">Ver Arquenza</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-media">
+              <img src="images/P1030816.JPG" alt="Verónica Salamanca en su faceta profesional" />
+            </div>
+            <div class="card-body">
+              <img class="card-logo" src="images/Logo fondo transparente.png" alt="Logo Verónica Salamanca" />
+              <h3>PREVENZA</h3>
+              <p><strong>Dirección operativa y preventiva para empresas.</strong></p>
+              <p>Orden, control y rentabilidad para empresas industriales y pymes que necesitan estructura real.</p>
+              <ul>
+                <li>Diagnóstico y ajuste operativo</li>
+                <li>Dirección operativa y preventiva externalizada</li>
+                <li>PRL, CAE y cumplimiento operativo</li>
+                <li>Prevención estratégica y sostenibilidad</li>
+              </ul>
+              <div class="card-footer">
+                <span class="price-tag">Desde 900 €</span>
+                <a class="btn btn-ghost" href="/prevenza/">Ver Prevenza</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section">
+      <div class="container story-grid">
+        <div class="story-visual">
+          <div class="top-photo">
+            <img src="images/P1030603.JPG" alt="Verónica Salamanca en una fotografía cercana" />
+          </div>
+        </div>
+
+        <div class="story-copy">
+          <span class="eyebrow">Diferencial</span>
+          <h2>Integro empresa, emoción y estructura para prevenir el caos antes de que ocurra.</h2>
+          <p>
+            No trabajo solo lo visible. Trabajo lo que sostiene —o rompe— todo: la estructura, la emoción, la operativa y la prevención.
+          </p>
+          <p>
+            Esa es la base común de toda la web. En empresa, se traduce en orden y control. En lo personal, en sostén y dirección. En familia, en acompañar cambios sin que se conviertan en heridas más profundas.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Cuéntame tu situación</a>
+            <a class="btn btn-ghost" href="/prevenza/">Solicitar diagnóstico</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-strip section">
+      <div class="container about-grid">
+        <div class="about-header">
+          <img src="images/P1030631.JPG" alt="Verónica Salamanca en retrato" />
+        </div>
+
+        <div class="about-copy">
+          <span class="eyebrow" style="background: rgba(255,255,255,0.14); color:#fff;">Quién soy</span>
+          <h2>Más de 10 años en consultoría y dirección administrativa en empresas industriales.</h2>
+          <p>
+            Soy especialista en prevención, coordinación operativa y control del desorden empresarial. A la vez, he desarrollado un recorrido profundo en organización personal, gestión emocional y acompañamiento familiar.
+          </p>
+          <p>
+            He vivido la empresa desde dentro y desde fuera. No hablo desde teoría, hablo desde lo que realmente pasa. Trabajo con personas y empresas que quieren hacer las cosas bien, de verdad.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn-secondary" href="/sobre-mi/">Más sobre mí</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section">
+      <div class="container">
+        <div class="cta-box">
+          <span class="eyebrow" style="background: rgba(255,255,255,0.12); color:#fff;">Siguiente paso</span>
+          <h2 style="color:#fff; margin-top:14px;">Si quieres avanzar, hagámoslo con claridad desde el principio</h2>
+          <p>
+            Puedes entrar por la línea que mejor encaje contigo o escribirme directamente para valorar tu situación. Si buscas sostén personal o familiar, te orientaré hacia la vía más adecuada. Si eres empresa, te diré rápido si Prevenza tiene sentido para ti.
+          </p>
+
+          <div class="btn-row" style="justify-content:center;">
+            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-secondary" href="/contacto/">Agenda una llamada</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p style="margin:0; color: rgba(255,255,255,0.82);">© Verónica Salamanca. Todos los derechos reservados.</p>
+
+      <div class="footer-links">
+        <a href="/">Inicio</a>
+        <a href="/sobre-mi/">Sobre mí</a>
+        <a href="/contacto/">Contacto</a>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/privacidad/">Privacidad</a>
+        <a href="/cookies/">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileToggle = document.getElementById("mobileToggle");
+    const mobilePanel = document.getElementById("mobilePanel");
+
+    if (mobileToggle && mobilePanel) {
+      mobileToggle.addEventListener("click", () => {
+        const isOpen = mobilePanel.classList.toggle("open");
+        mobileToggle.classList.toggle("active", isOpen);
+        mobileToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        document.body.classList.toggle("menu-open", isOpen);
+      });
+
+      mobilePanel.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobilePanel.classList.remove("open");
+          mobileToggle.classList.remove("active");
+          mobileToggle.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("menu-open");
+        });
+      });
+    }
+  </script>
+</body>
+</html>
