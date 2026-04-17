@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equilíbrate | Organización personal y energética</title>
+  <meta
+    name="description"
+    content="Un sistema para sostener tu vida con más claridad, estructura y presencia. Mentoría, membresía, sesiones y agenda."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.veronicasalamanca.com/equilibrate/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Verónica Salamanca" />
+  <meta property="og:title" content="Equilíbrate | Organización personal y energética" />
+  <meta property="og:description" content="Un sistema para sostener tu vida con más claridad, estructura y presencia. Mentoría, membresía, sesiones y agenda." />
+  <meta property="og:url" content="https://www.veronicasalamanca.com/equilibrate/" />
+  <meta property="og:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Equilíbrate | Organización personal y energética" />
+  <meta name="twitter:description" content="Un sistema para sostener tu vida con más claridad, estructura y presencia. Mentoría, membresía, sesiones y agenda." />
+  <meta name="twitter:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --green-900: #667b73;
+      --green-800: #7f938a;
+      --mint-500: #a7c6b7;
+      --mint-300: #dbe9e2;
+      --lilac-500: #b9b0c8;
+      --lilac-300: #e7e2ef;
+      --gold-500: #c5a94e;
+      --cream-50: #faf8f4;
+      --cream-100: #f3eee7;
+      --sand-200: #e7ddd1;
+      --text-900: #181818;
+      --text-700: #4e4e4e;
+      --text-500: #7a7a7a;
+      --white: #ffffff;
+      --shadow-soft: 0 18px 45px rgba(102, 123, 115, 0.14);
+      --shadow-card: 0 12px 26px rgba(24, 24, 24, 0.07);
+      --radius-xl: 32px;
+      --radius-lg: 22px;
+      --max: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", system-ui, sans-serif;
+      color: var(--text-900);
+      background: var(--cream-50);
+      line-height: 1.55;
+    }
+
+    body.menu-open { overflow: hidden; }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .section { padding: 84px 0; }
+    .section-tight { padding: 62px 0; }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(185, 176, 200, 0.16);
+      color: var(--green-900);
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3, .nav-links, .dropdown-menu a, .mobile-nav a, .mobile-submenu summary {
+      font-family: "Cinzel", serif;
+      letter-spacing: -0.02em;
+      line-height: 1.02;
+      margin: 0 0 16px;
+    }
+
+    h1 { font-size: clamp(2.7rem, 6vw, 5rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3.4rem); }
+    h3 { font-size: clamp(1.3rem, 2.3vw, 2rem); }
+
+    p {
+      margin: 0 0 16px;
+      color: var(--text-700);
+      font-size: 1rem;
+    }
+
+    .lead { font-size: 1.08rem; }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      text-align: center;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--green-900);
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-secondary {
+      background: var(--gold-500);
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-tertiary {
+      background: var(--lilac-500);
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(102, 123, 115, 0.22);
+      color: var(--green-900);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(102, 123, 115, 0.98);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .logo img { width: 180px; height: auto; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      color: var(--white);
+      font-size: 0.96rem;
+      margin: 0;
+    }
+
+    .nav-links > a,
+    .dropdown-toggle {
+      margin: 0;
+      color: var(--white);
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .has-dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown-toggle::after {
+      content: "▾";
+      margin-left: 8px;
+      font-size: 0.78rem;
+      font-family: sans-serif;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 300px;
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(102,123,115,0.12);
+      padding: 14px;
+      display: none;
+      z-index: 20;
+    }
+
+    .has-dropdown:hover .dropdown-menu,
+    .has-dropdown:focus-within .dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 12px;
+      border-radius: 12px;
+      color: var(--green-900);
+      font-size: 0.96rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .dropdown-menu a span {
+      display: block;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.84rem;
+      color: var(--text-500);
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    .dropdown-menu a:hover { background: var(--cream-100); }
+
+    .mobile-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: transparent;
+      border-radius: 14px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      position: relative;
+    }
+
+    .mobile-toggle span,
+    .mobile-toggle::before,
+    .mobile-toggle::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 99px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      position: absolute;
+    }
+
+    .mobile-toggle span { transform: translateY(0); }
+    .mobile-toggle::before { transform: translateY(-7px); }
+    .mobile-toggle::after { transform: translateY(7px); }
+
+    .mobile-toggle.active span { opacity: 0; }
+    .mobile-toggle.active::before { transform: rotate(45deg); }
+    .mobile-toggle.active::after { transform: rotate(-45deg); }
+
+    .mobile-panel {
+      display: none;
+      position: fixed;
+      inset: 76px 0 0 0;
+      background: rgba(250, 248, 244, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 90;
+      overflow-y: auto;
+      border-top: 1px solid rgba(102, 123, 115, 0.12);
+      padding: 18px 0 24px;
+    }
+
+    .mobile-panel.open { display: block; }
+
+    .mobile-nav {
+      width: min(var(--max), calc(100% - 1.2rem));
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mobile-nav > a,
+    .mobile-submenu summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white);
+      color: var(--green-900);
+      border: 1px solid rgba(102, 123, 115, 0.12);
+      border-radius: 16px;
+      padding: 16px 18px;
+      font-size: 1.05rem;
+      box-shadow: var(--shadow-card);
+      margin: 0;
+    }
+
+    .mobile-submenu summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .mobile-submenu summary::-webkit-details-marker { display: none; }
+
+    .mobile-submenu[open] summary {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .mobile-submenu-links {
+      background: var(--white);
+      border: 1px solid rgba(102,123,115,0.12);
+      border-top: 0;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      padding: 6px 10px 12px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .mobile-submenu-links a {
+      display: block;
+      padding: 12px 10px;
+      border-radius: 12px;
+      color: var(--green-900);
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.96rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .mobile-submenu-links a + a { margin-top: 4px; }
+    .mobile-submenu-links a:hover { background: var(--cream-100); }
+
+    .mobile-contact-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at top left, rgba(185,176,200,0.16), transparent 26%),
+        linear-gradient(180deg, #faf8f4 0%, #f2ece4 100%);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .hero-photo {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      object-fit: cover;
+      box-shadow: var(--shadow-soft);
+      aspect-ratio: 4 / 4.9;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .point {
+      background: var(--white);
+      border-radius: 18px;
+      border: 1px solid rgba(102,123,115,0.08);
+      padding: 16px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .point strong {
+      display: block;
+      color: var(--green-900);
+      margin-bottom: 6px;
+      font-size: 0.94rem;
+    }
+
+    .point p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .section-head {
+      max-width: 860px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-head p {
+      max-width: 760px;
+      margin: 0 auto 14px;
+    }
+
+    .value-grid,
+    .service-grid,
+    .difference-grid,
+    .path-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .value-grid { grid-template-columns: repeat(4, 1fr); }
+    .service-grid { grid-template-columns: repeat(4, 1fr); }
+    .difference-grid { grid-template-columns: repeat(3, 1fr); }
+    .path-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .value-card,
+    .service-card,
+    .difference-card,
+    .path-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(102,123,115,0.08);
+      box-shadow: var(--shadow-card);
+      padding: 24px;
+    }
+
+    .value-card h3,
+    .service-card h3,
+    .difference-card h3,
+    .path-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .service-card.featured {
+      border: 1px solid rgba(185,176,200,0.4);
+      box-shadow: 0 18px 45px rgba(185,176,200,0.14);
+      background: linear-gradient(180deg, #fbf8ff 0%, #ffffff 100%);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(185,176,200,0.16);
+      color: var(--green-900);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 16px;
+    }
+
+    .service-price {
+      font-weight: 800;
+      color: var(--green-900);
+      font-size: 1.1rem;
+      margin-top: 14px;
+    }
+
+    .service-card ul {
+      margin: 16px 0 0;
+      padding-left: 18px;
+      color: var(--text-700);
+    }
+
+    .service-card li + li { margin-top: 8px; }
+
+    .story {
+      background: linear-gradient(180deg, #f1ebe2 0%, #f8f5ef 100%);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .story-photo {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      min-height: 520px;
+    }
+
+    .story-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .warning-strip {
+      background: var(--green-900);
+      color: var(--white);
+    }
+
+    .warning-box {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .warning-box p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.05rem;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--green-900), #7f938a 62%, #b9b0c8 100%);
+      color: var(--white);
+    }
+
+    .cta-box {
+      border-radius: 32px;
+      padding: 42px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .cta-box p {
+      color: rgba(255,255,255,0.9);
+      max-width: 760px;
+      margin: 0 auto 16px;
+    }
+
+    .site-footer {
+      background: #4f665c;
+      color: rgba(255,255,255,0.82);
+      padding: 30px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .value-grid,
+      .service-grid,
+      .difference-grid,
+      .path-grid,
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-points {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links { display: none; }
+      .mobile-toggle { display: inline-flex; }
+    }
+
+    @media (max-width: 720px) {
+      .section { padding: 62px 0; }
+      .section-tight { padding: 48px 0; }
+
+      .container {
+        width: min(var(--max), calc(100% - 1.2rem));
+      }
+
+      .nav { min-height: 76px; }
+      .logo img { width: 154px; }
+
+      .hero-grid { gap: 26px; }
+
+      .hero-copy h1 {
+        font-size: clamp(2.2rem, 9vw, 3.2rem);
+        line-height: 1.04;
+      }
+
+      .lead { font-size: 1rem; }
+
+      .btn { width: 100%; }
+      .btn-row { align-items: stretch; }
+
+      .section-head {
+        text-align: left;
+        margin-bottom: 28px;
+      }
+
+      .section-head p {
+        max-width: none;
+        margin-left: 0;
+      }
+
+      .value-card,
+      .service-card,
+      .difference-card,
+      .path-card,
+      .cta-box { padding: 22px; }
+
+      .story-photo { min-height: 340px; }
+
+      .footer-grid { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="/" aria-label="Inicio Verónica Salamanca">
+        <img src="../images/Logo fondo transparente.png" alt="Verónica Salamanca" />
+      </a>
+
+      <nav class="nav-links" aria-label="Principal">
+        <a href="/">Inicio</a>
+        <a href="/prevenza/">Prevenza</a>
+        <a href="/equilibrate/">Equilíbrate</a>
+        <a href="/arquenza/">Arquenza</a>
+
+        <div class="has-dropdown">
+          <span class="dropdown-toggle">Más</span>
+          <div class="dropdown-menu">
+            <a href="/aletia/">ALETIA<span>Filosofía, visión y base del universo.</span></a>
+            <a href="/quinta-vibracion/">QUINTA VIBRACIÓN<span>Método de transformación emocional y vibracional.</span></a>
+            <a href="/sobre-mi/">Sobre mí<span>Recorrido profesional, humano y diferencial.</span></a>
+            <a href="/contacto/">Contacto<span>Agenda llamada, WhatsApp o solicitud de información.</span></a>
+          </div>
+        </div>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <div class="mobile-nav">
+        <a href="/">Inicio</a>
+        <a href="/prevenza/">Prevenza</a>
+        <a href="/equilibrate/">Equilíbrate</a>
+        <a href="/arquenza/">Arquenza</a>
+
+        <details class="mobile-submenu">
+          <summary>Más</summary>
+          <div class="mobile-submenu-links">
+            <a href="/aletia/">Aletia</a>
+            <a href="/quinta-vibracion/">Quinta Vibración</a>
+            <a href="/sobre-mi/">Sobre mí</a>
+            <a href="/contacto/">Contacto</a>
+          </div>
+        </details>
+
+        <div class="mobile-contact-row">
+          <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          <a class="btn btn-secondary" href="/contacto/">Agenda una llamada</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">EQUILÍBRATE | Organización personal</span>
+          <h1>No necesitas hacer más. Necesitas sostener mejor.</h1>
+          <p class="lead">
+            Equilíbrate es un sistema para personas que están sosteniendo demasiadas cosas a la vez y sienten que se están perdiendo por el camino.
+          </p>
+          <p>
+            No es motivación vacía. No es teoría sin cuerpo. Es estructura, emoción y energía trabajando juntas para que puedas volver a ti con más claridad, más presencia y una forma distinta de sostener tu vida.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-secondary" href="#programas">Ver programas</a>
+            <a class="btn btn-ghost" href="/contacto/">Solicitar información</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="point">
+              <strong>Estructura</strong>
+              <p>Para ordenar lo que ahora te sobrepasa.</p>
+            </div>
+            <div class="point">
+              <strong>Emoción</strong>
+              <p>Para dejar de vivir reaccionando a todo.</p>
+            </div>
+            <div class="point">
+              <strong>Presencia</strong>
+              <p>Para volver a ti y decidir desde otro lugar.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img class="hero-photo" src="../images/P1020984.JPG" alt="Verónica Salamanca con péndulo" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Para quién es</span>
+          <h2>Equilíbrate es para mujeres que sostienen demasiado y ya no quieren seguir perdiéndose por el camino</h2>
+          <p>
+            Está especialmente enfocado a emprendedoras y mujeres que ocupan demasiados roles, viven en exigencia constante y sienten que por fuera siguen funcionando, pero por dentro cada vez están más lejos de sí mismas.
+          </p>
+        </div>
+
+        <div class="value-grid">
+          <div class="value-card">
+            <h3>Si sostienes mucho</h3>
+            <p>Y sientes que cada área de tu vida tira de ti a la vez.</p>
+          </div>
+
+          <div class="value-card">
+            <h3>Si te pierdes fácil</h3>
+            <p>Entre responsabilidades, exigencias y falta de espacio interno.</p>
+          </div>
+
+          <div class="value-card">
+            <h3>Si necesitas orden</h3>
+            <p>Pero no solo externo, también emocional y energético.</p>
+          </div>
+
+          <div class="value-card">
+            <h3>Si estás lista</h3>
+            <p>Para un cambio real, no solo para sentirte mejor unos días.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section">
+      <div class="container story-grid">
+        <div class="story-photo">
+          <img src="../images/P1030603.JPG" alt="Verónica Salamanca en fotografía cercana" />
+        </div>
+
+        <div>
+          <span class="eyebrow">Qué cambia</span>
+          <h2>Cuando te equilibras, no solo te organizas mejor: cambias la forma en la que te sostienes.</h2>
+          <p>
+            Equilíbrate no busca que metas más cosas en tu agenda. Busca que puedas sostener tu vida con más dirección, más presencia y menos desgaste.
+          </p>
+          <p>
+            Empiezas a ordenar prioridades, a leer mejor tu energía, a regularte con más conciencia y a crear una estructura que no te ahogue, sino que te acompañe.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Quiero saber si es para mí</a>
+            <a class="btn btn-ghost" href="/contacto/">Solicitar información</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="programas" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Programas y servicios</span>
+          <h2>Cuatro formas de entrar en Equilíbrate</h2>
+          <p>
+            Cada vía responde a un nivel distinto de acompañamiento. Lo importante no es entrar por la más intensa, sino por la que realmente encaja contigo ahora.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card featured">
+            <span class="tag">Servicio principal</span>
+            <h3>Mentoría anual</h3>
+            <p>
+              Un acompañamiento profundo y sostenido para reorganizar tu vida, recuperar dirección y crear un sistema propio que puedas habitar de verdad.
+            </p>
+            <ul>
+              <li>Proceso de transformación real y continuado</li>
+              <li>Organización, sostén, energía y revisión</li>
+              <li>Para mujeres que quieren un cambio serio</li>
+            </ul>
+            <p class="service-price">500 €/mes</p>
+          </article>
+
+          <article class="service-card">
+            <span class="tag">Continuidad</span>
+            <h3>Membresía grupal</h3>
+            <p>
+              Un espacio de acompañamiento para seguir sosteniéndote, revisar tu proceso y no volver al mismo punto de desconexión.
+            </p>
+            <ul>
+              <li>Formato grupal</li>
+              <li>Sin permanencia</li>
+              <li>Ideal para continuidad y sostén</li>
+            </ul>
+            <p class="service-price">150 €/mes</p>
+          </article>
+
+          <article class="service-card">
+            <span class="tag">Trabajo puntual</span>
+            <h3>Sesión individual</h3>
+            <p>
+              Una sesión intensa de 2 horas para trabajar un momento concreto, desbloquear una situación o reordenarte desde un punto preciso.
+            </p>
+            <ul>
+              <li>Formato individual</li>
+              <li>Enfoque concentrado</li>
+              <li>Ideal si necesitas claridad ya</li>
+            </ul>
+            <p class="service-price">350 €</p>
+          </article>
+
+          <article class="service-card">
+            <span class="tag">Herramienta</span>
+            <h3>Agenda Equilíbrate</h3>
+            <p>
+              Una herramienta física para sostener tu organización diaria con una lógica distinta: más consciente, más clara y más alineada contigo.
+            </p>
+            <ul>
+              <li>Apoyo real al día a día</li>
+              <li>Companion de la metodología</li>
+              <li>Accesible y práctica</li>
+            </ul>
+            <p class="service-price">45 €</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Diferencial</span>
+          <h2>Equilíbrate no es para todo el mundo</h2>
+          <p>
+            Y eso es parte de su valor. No funciona si no hay implicación real. No es algo que “recibes” pasivamente: es algo que trabajas, habitas y sostienes.
+          </p>
+        </div>
+
+        <div class="difference-grid">
+          <div class="difference-card">
+            <h3>Sí es para ti si…</h3>
+            <p>Quieres hacer cambios reales y no seguir acumulando herramientas que luego no integras.</p>
+          </div>
+
+          <div class="difference-card">
+            <h3>No es para ti si…</h3>
+            <p>Buscas una solución rápida sin revisar tu forma de sostenerte, decidir y ordenarte.</p>
+          </div>
+
+          <div class="difference-card">
+            <h3>Qué pide</h3>
+            <p>Presencia, compromiso y deseo real de volver a ti sin autoengaños ni maquillaje.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="warning-strip section-tight">
+      <div class="container warning-box">
+        <span class="eyebrow" style="background: rgba(255,255,255,0.14); color:#fff;">Base del método</span>
+        <h2 style="color:#fff;">Equilíbrate une estructura, emoción y energía</h2>
+        <p>
+          No separo lo práctico de lo interno. Lo que haces, cómo te organizas, cómo te sientes y cómo te sostienes forman parte del mismo sistema. Por eso el método no va solo de agenda: va de presencia.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Cómo empezar</span>
+          <h2>Una forma simple de entrar</h2>
+          <p>
+            Si no sabes por dónde empezar, lo más útil es que me escribas y valoremos juntas cuál es la vía que mejor encaja con tu momento actual.
+          </p>
+        </div>
+
+        <div class="path-grid">
+          <div class="path-card">
+            <h3>1. Me escribes</h3>
+            <p>Me cuentas brevemente en qué punto estás y qué sientes que ya no puedes seguir sosteniendo igual.</p>
+          </div>
+
+          <div class="path-card">
+            <h3>2. Te oriento</h3>
+            <p>Vemos si encajas mejor en mentoría anual, membresía, sesión individual o simplemente empezar por la agenda.</p>
+          </div>
+
+          <div class="path-card">
+            <h3>3. Avanzas</h3>
+            <p>Empiezas desde una vía concreta y útil, sin dar vueltas innecesarias ni sobrecargarte más.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section section">
+      <div class="container">
+        <div class="cta-box">
+          <span class="eyebrow" style="background: rgba(255,255,255,0.12); color:#fff;">Siguiente paso</span>
+          <h2 style="color:#fff; margin-top:14px;">Si estás cansada de sostenerlo todo sola, escríbeme</h2>
+          <p>
+            Cuéntame brevemente tu situación y te diré con honestidad si Equilíbrate tiene sentido para ti y cuál sería la mejor forma de empezar.
+          </p>
+          <div class="btn-row" style="justify-content:center;">
+            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-secondary" href="/contacto/">Solicitar información</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p style="margin:0; color: rgba(255,255,255,0.82);">© Verónica Salamanca. Todos los derechos reservados.</p>
+
+      <div class="footer-links">
+        <a href="/">Inicio</a>
+        <a href="/sobre-mi/">Sobre mí</a>
+        <a href="/contacto/">Contacto</a>
+        <a href="/aviso-legal/">Aviso legal</a>
+        <a href="/privacidad/">Privacidad</a>
+        <a href="/cookies/">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileToggle = document.getElementById("mobileToggle");
+    const mobilePanel = document.getElementById("mobilePanel");
+
+    if (mobileToggle && mobilePanel) {
+      mobileToggle.addEventListener("click", () => {
+        const isOpen = mobilePanel.classList.toggle("open");
+        mobileToggle.classList.toggle("active", isOpen);
+        mobileToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        document.body.classList.toggle("menu-open", isOpen);
+      });
+
+      mobilePanel.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobilePanel.classList.remove("open");
+          mobileToggle.classList.remove("active");
+          mobileToggle.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("menu-open");
+        });
+      });
+    }
+  </script>
+</body>
+</html>
