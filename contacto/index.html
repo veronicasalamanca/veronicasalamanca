@@ -6,7 +6,7 @@
   <title>Contacto | Verónica Salamanca</title>
   <meta
     name="description"
-    content="Escríbeme por WhatsApp, solicita información o deja tu mensaje para que pueda orientarte según tu situación."
+    content="Escríbeme por WhatsApp, solicita información o agenda directamente una sesión con Verónica Salamanca."
   />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.veronicasalamanca.com/contacto/" />
@@ -14,13 +14,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Verónica Salamanca" />
   <meta property="og:title" content="Contacto | Verónica Salamanca" />
-  <meta property="og:description" content="Escríbeme por WhatsApp, solicita información o deja tu mensaje para que pueda orientarte según tu situación." />
+  <meta property="og:description" content="Escríbeme por WhatsApp, solicita información o agenda directamente una sesión con Verónica Salamanca." />
   <meta property="og:url" content="https://www.veronicasalamanca.com/contacto/" />
   <meta property="og:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contacto | Verónica Salamanca" />
-  <meta name="twitter:description" content="Escríbeme por WhatsApp, solicita información o deja tu mensaje para que pueda orientarte según tu situación." />
+  <meta name="twitter:description" content="Escríbeme por WhatsApp, solicita información o agenda directamente una sesión con Verónica Salamanca." />
   <meta name="twitter:image" content="https://www.veronicasalamanca.com/images/Logo%20Visual.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -164,7 +164,7 @@
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
       background: rgba(102, 123, 115, 0.98);
       border-bottom: 1px solid rgba(255,255,255,0.08);
       backdrop-filter: blur(10px);
@@ -191,10 +191,13 @@
 
     .nav-links > a,
     .dropdown-toggle {
-      margin: 0;
       color: var(--white);
       font-weight: 500;
       cursor: pointer;
+      background: none;
+      border: none;
+      font: inherit;
+      padding: 0;
     }
 
     .has-dropdown {
@@ -212,23 +215,20 @@
 
     .dropdown-menu {
       position: absolute;
-      top: calc(100% + 12px);
+      top: calc(100% + 14px);
       left: 50%;
       transform: translateX(-50%);
-      min-width: 300px;
+      min-width: 320px;
       background: var(--white);
       border-radius: 18px;
       box-shadow: var(--shadow-soft);
       border: 1px solid rgba(102,123,115,0.12);
       padding: 14px;
       display: none;
-      z-index: 20;
+      z-index: 1200;
     }
 
-    .has-dropdown:hover .dropdown-menu,
-    .has-dropdown:focus-within .dropdown-menu {
-      display: block;
-    }
+    .has-dropdown.open .dropdown-menu { display: block; }
 
     .dropdown-menu a {
       display: block;
@@ -292,7 +292,7 @@
       inset: 76px 0 0 0;
       background: rgba(250, 248, 244, 0.98);
       backdrop-filter: blur(10px);
-      z-index: 90;
+      z-index: 1100;
       overflow-y: auto;
       border-top: 1px solid rgba(102, 123, 115, 0.12);
       padding: 18px 0 24px;
@@ -452,6 +452,17 @@
       font-size: 1.05rem;
     }
 
+    .section-head {
+      max-width: 860px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-head p {
+      max-width: 760px;
+      margin: 0 auto 14px;
+    }
+
     .form-wrap {
       max-width: 860px;
       margin: 0 auto;
@@ -605,17 +616,19 @@
         <a href="/">Inicio</a>
         <a href="/prevenza/">Prevenza</a>
         <a href="/equilibrate/">Equilíbrate</a>
-        <a href="/arquenza/">Arquenza</a>
 
-        <div class="has-dropdown">
-          <span class="dropdown-toggle">Más</span>
+        <div class="has-dropdown" id="arquenzaDropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">Arquenza</button>
           <div class="dropdown-menu">
-            <a href="/aletia/">ALETIA<span>Filosofía, visión y base del universo.</span></a>
-            <a href="/quinta-vibracion/">QUINTA VIBRACIÓN<span>Método de transformación emocional y vibracional.</span></a>
-            <a href="/sobre-mi/">Sobre mí<span>Recorrido profesional, humano y diferencial.</span></a>
-            <a href="/contacto/">Contacto<span>Agenda llamada, WhatsApp o solicitud de información.</span></a>
+            <a href="/arquenza/">Arquenza<span>Familia, filosofía de vida, talleres y experiencias holísticas.</span></a>
+            <a href="/arquenza/#familias">Familias<span>Acompañamiento para procesos emocionales y familiares complejos.</span></a>
+            <a href="/arquenza/#aletia">Aletia<span>Base filosófica y visión profunda del universo Arquenza.</span></a>
+            <a href="/arquenza/#quinta-vibracion">Quinta Vibración<span>Transformación vibracional, presencia y experiencia consciente.</span></a>
           </div>
         </div>
+
+        <a href="/sobre-mi/">Sobre mí</a>
+        <a href="/contacto/">Contacto</a>
       </nav>
 
       <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel">
@@ -628,21 +641,23 @@
         <a href="/">Inicio</a>
         <a href="/prevenza/">Prevenza</a>
         <a href="/equilibrate/">Equilíbrate</a>
-        <a href="/arquenza/">Arquenza</a>
 
         <details class="mobile-submenu">
-          <summary>Más</summary>
+          <summary>Arquenza</summary>
           <div class="mobile-submenu-links">
-            <a href="/aletia/">Aletia</a>
-            <a href="/quinta-vibracion/">Quinta Vibración</a>
-            <a href="/sobre-mi/">Sobre mí</a>
-            <a href="/contacto/">Contacto</a>
+            <a href="/arquenza/">Arquenza</a>
+            <a href="/arquenza/#familias">Familias</a>
+            <a href="/arquenza/#aletia">Aletia</a>
+            <a href="/arquenza/#quinta-vibracion">Quinta Vibración</a>
           </div>
         </details>
 
+        <a href="/sobre-mi/">Sobre mí</a>
+        <a href="/contacto/">Contacto</a>
+
         <div class="mobile-contact-row">
-          <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
-          <a class="btn btn-secondary" href="#formulario">Solicitar información</a>
+          <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20contacto%20de%20tu%20web.%20Quiero%20hablar%20contigo." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
         </div>
       </div>
     </div>
@@ -659,16 +674,16 @@
           <span class="eyebrow">Contacto</span>
           <h1>Si quieres avanzar, hablemos con claridad desde el principio.</h1>
           <p class="lead">
-            Esta página está pensada para facilitar el contacto, no para hacerlo más complejo. Puedes escribirme directamente por WhatsApp, solicitar información o dejarme tu mensaje para que pueda orientarte mejor.
+            Esta página está pensada para facilitar el contacto, no para hacerlo más complejo. Puedes escribirme directamente por WhatsApp, solicitar información o reservar una sesión desde el calendario.
           </p>
           <p>
-            Según tu situación, te orientaré hacia PREVENZA, EQUILÍBRATE o ARQUENZA. Lo importante no es encajar en una etiqueta, sino saber si hay una vía real de trabajo útil para ti.
+            Según tu situación, te orientaré hacia Prevenza, Equilíbrate o Arquenza. Lo importante no es encajar en una etiqueta, sino saber si hay una vía real de trabajo útil para ti.
           </p>
 
           <div class="btn-row">
-            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
-            <a class="btn btn-secondary" href="#formulario">Solicitar información</a>
-            <a class="btn btn-ghost" href="/sobre-mi/">Más sobre mí</a>
+            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20contacto%20de%20tu%20web.%20Quiero%20hablar%20contigo." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
+            <a class="btn btn-ghost" href="#formulario">Solicitar información</a>
           </div>
         </div>
       </div>
@@ -684,7 +699,7 @@
               La forma más rápida y directa de contarme tu situación y saber si hay encaje.
             </p>
             <div class="btn-row">
-              <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Abrir WhatsApp</a>
+              <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20contacto%20de%20tu%20web.%20Quiero%20hablar%20contigo." target="_blank" rel="noopener">Abrir WhatsApp</a>
             </div>
           </article>
 
@@ -700,13 +715,13 @@
           </article>
 
           <article class="contact-card">
-            <span class="tag">Siguiente paso</span>
-            <h3>Agenda</h3>
+            <span class="tag">Reserva directa</span>
+            <h3>Agenda una sesión</h3>
             <p>
-              Cuando tengas tu enlace de calendario, aquí podremos activar directamente la reserva de reuniones.
+              Si prefieres reservar directamente una reunión o sesión, ya puedes hacerlo desde mi calendario.
             </p>
             <div class="btn-row">
-              <a class="btn btn-secondary" href="tel:655355826">Llamar ahora</a>
+              <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Abrir calendario</a>
             </div>
           </article>
         </div>
@@ -726,20 +741,20 @@
     <section class="section-tight">
       <div class="container">
         <div class="path-grid">
-          <div class="path-card">
+          <article class="path-card">
             <h3>Si vienes por empresa</h3>
             <p>Cuéntame brevemente qué está pasando en la operativa, en la administración o en la prevención.</p>
-          </div>
+          </article>
 
-          <div class="path-card">
+          <article class="path-card">
             <h3>Si vienes por Equilíbrate</h3>
             <p>Cuéntame en qué punto estás y qué sientes que ya no puedes sostener igual.</p>
-          </div>
+          </article>
 
-          <div class="path-card">
+          <article class="path-card">
             <h3>Si vienes por Arquenza</h3>
-            <p>Cuéntame qué proceso familiar o emocional estás viviendo y qué necesitas sostener mejor.</p>
-          </div>
+            <p>Cuéntame qué proceso familiar, emocional o vital estás viviendo y qué necesitas sostener mejor.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -798,7 +813,7 @@
                   required
                 ></textarea>
                 <p class="helper">
-                  También puedes escribir directamente a <strong>escribenos@veronicasalamanca.com</strong>, aunque la vía principal sigue siendo WhatsApp.
+                  También puedes escribir directamente a <strong>escribenos@veronicasalamanca.com</strong>, aunque la vía más ágil suele ser WhatsApp.
                 </p>
               </div>
 
@@ -814,6 +829,21 @@
 
           <div id="formError" class="form-status error">
             Ha habido un problema al enviar el formulario. Prueba de nuevo o escríbeme por WhatsApp.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Reserva directa</span>
+          <h2>Si lo prefieres, puedes agendar directamente</h2>
+          <p>
+            Si ya sabes que quieres tener una conversación o valorar una sesión, puedes reservar directamente desde el calendario.
+          </p>
+          <div class="btn-row" style="justify-content:center;">
+            <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
           </div>
         </div>
       </div>
@@ -837,6 +867,8 @@
   <script>
     const mobileToggle = document.getElementById("mobileToggle");
     const mobilePanel = document.getElementById("mobilePanel");
+    const arquenzaDropdown = document.getElementById("arquenzaDropdown");
+    const dropdownButton = arquenzaDropdown ? arquenzaDropdown.querySelector(".dropdown-toggle") : null;
 
     if (mobileToggle && mobilePanel) {
       mobileToggle.addEventListener("click", () => {
@@ -853,6 +885,21 @@
           mobileToggle.setAttribute("aria-expanded", "false");
           document.body.classList.remove("menu-open");
         });
+      });
+    }
+
+    if (arquenzaDropdown && dropdownButton) {
+      dropdownButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = arquenzaDropdown.classList.toggle("open");
+        dropdownButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!arquenzaDropdown.contains(e.target)) {
+          arquenzaDropdown.classList.remove("open");
+          dropdownButton.setAttribute("aria-expanded", "false");
+        }
       });
     }
 
