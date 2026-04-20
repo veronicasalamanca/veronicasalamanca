@@ -135,6 +135,7 @@
       border: 1px solid transparent;
       transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
       text-align: center;
+      cursor: pointer;
     }
 
     .btn:hover { transform: translateY(-2px); }
@@ -230,9 +231,7 @@
       z-index: 1200;
     }
 
-    .has-dropdown.open .dropdown-menu {
-      display: block;
-    }
+    .has-dropdown.open .dropdown-menu { display: block; }
 
     .dropdown-menu a {
       display: block;
@@ -392,19 +391,31 @@
       aspect-ratio: 4 / 4.9;
     }
 
-    .hero-points {
+    .hero-points,
+    .value-grid,
+    .service-grid,
+    .difference-grid,
+    .path-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 26px;
+      gap: 22px;
     }
 
-    .point {
+    .hero-points { grid-template-columns: repeat(3, 1fr); }
+    .value-grid { grid-template-columns: repeat(4, 1fr); }
+    .service-grid { grid-template-columns: repeat(4, 1fr); }
+    .difference-grid { grid-template-columns: repeat(3, 1fr); }
+    .path-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .point,
+    .value-card,
+    .service-card,
+    .difference-card,
+    .path-card {
       background: var(--white);
-      border-radius: 18px;
+      border-radius: var(--radius-lg);
       border: 1px solid rgba(102,123,115,0.08);
-      padding: 16px;
       box-shadow: var(--shadow-card);
+      padding: 24px;
     }
 
     .point strong {
@@ -430,44 +441,6 @@
       margin: 0 auto 14px;
     }
 
-    .value-grid,
-    .service-grid,
-    .difference-grid,
-    .path-grid {
-      display: grid;
-      gap: 22px;
-    }
-
-    .value-grid { grid-template-columns: repeat(4, 1fr); }
-    .service-grid { grid-template-columns: repeat(4, 1fr); }
-    .difference-grid { grid-template-columns: repeat(3, 1fr); }
-    .path-grid { grid-template-columns: repeat(3, 1fr); }
-
-    .value-card,
-    .service-card,
-    .difference-card,
-    .path-card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(102,123,115,0.08);
-      box-shadow: var(--shadow-card);
-      padding: 24px;
-    }
-
-    .value-card h3,
-    .service-card h3,
-    .difference-card h3,
-    .path-card h3 {
-      font-size: 1.35rem;
-      margin-bottom: 12px;
-    }
-
-    .service-card.featured {
-      border: 1px solid rgba(185,176,200,0.4);
-      box-shadow: 0 18px 45px rgba(185,176,200,0.14);
-      background: linear-gradient(180deg, #fbf8ff 0%, #ffffff 100%);
-    }
-
     .tag {
       display: inline-block;
       padding: 7px 12px;
@@ -479,6 +452,12 @@
       text-transform: uppercase;
       letter-spacing: .08em;
       margin-bottom: 16px;
+    }
+
+    .service-card.featured {
+      border: 1px solid rgba(185,176,200,0.4);
+      box-shadow: 0 18px 45px rgba(185,176,200,0.14);
+      background: linear-gradient(180deg, #fbf8ff 0%, #ffffff 100%);
     }
 
     .service-price {
@@ -591,15 +570,12 @@
 
     @media (max-width: 1080px) {
       .hero-grid,
+      .hero-points,
       .value-grid,
       .service-grid,
       .difference-grid,
       .path-grid,
       .story-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-points {
         grid-template-columns: 1fr;
       }
 
@@ -703,7 +679,7 @@
         <a href="/contacto/">Contacto</a>
 
         <div class="mobile-contact-row">
-          <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20Equil%C3%ADbrate.%20Quiero%20saber%20qu%C3%A9%20opci%C3%B3n%20encaja%20mejor%20conmigo." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
           <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
         </div>
       </div>
@@ -724,24 +700,9 @@
           </p>
 
           <div class="btn-row">
-            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20Equil%C3%ADbrate.%20Quiero%20saber%20qu%C3%A9%20opci%C3%B3n%20encaja%20mejor%20conmigo." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
             <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
             <a class="btn btn-ghost" href="#programas">Ver programas</a>
-          </div>
-
-          <div class="hero-points">
-            <div class="point">
-              <strong>Estructura</strong>
-              <p>Para ordenar lo que ahora te sobrepasa.</p>
-            </div>
-            <div class="point">
-              <strong>Emoción</strong>
-              <p>Para dejar de vivir reaccionando a todo.</p>
-            </div>
-            <div class="point">
-              <strong>Presencia</strong>
-              <p>Para volver a ti y decidir desde otro lugar.</p>
-            </div>
           </div>
         </div>
 
@@ -809,7 +770,7 @@
             Empiezas a ordenar prioridades, a leer mejor tu energía, a regularte con más conciencia y a crear una estructura que no te ahogue, sino que te acompañe.
           </p>
           <div class="btn-row">
-            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Quiero saber si es para mí</a>
+            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20Equil%C3%ADbrate%20porque%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tu%20mentoria%20y%20ver%20si%20encaja%20conmigo." target="_blank" rel="noopener">Quiero saber si es para mí</a>
             <a class="btn btn-ghost" href="/contacto/">Solicitar información</a>
           </div>
         </div>
@@ -963,7 +924,7 @@
             Cuéntame brevemente tu situación y te diré con honestidad si Equilíbrate tiene sentido para ti y cuál sería la mejor forma de empezar.
           </p>
           <div class="btn-row" style="justify-content:center;">
-            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20Equil%C3%ADbrate.%20Quiero%20saber%20qu%C3%A9%20opci%C3%B3n%20encaja%20mejor%20conmigo." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
             <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
           </div>
         </div>
