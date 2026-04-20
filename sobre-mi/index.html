@@ -107,7 +107,7 @@
 
     h1 { font-size: clamp(2.7rem, 6vw, 5rem); }
     h2 { font-size: clamp(2rem, 4vw, 3.4rem); }
-    h3 { font-size: clamp(1.3rem, 2.3vw, 2rem); }
+    h3 { font-size: clamp(1.25rem, 2vw, 1.9rem); }
 
     p {
       margin: 0 0 16px;
@@ -135,6 +135,7 @@
       border: 1px solid transparent;
       transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease, border-color 0.2s ease;
       text-align: center;
+      cursor: pointer;
     }
 
     .btn:hover { transform: translateY(-2px); }
@@ -151,6 +152,12 @@
       box-shadow: var(--shadow-card);
     }
 
+    .btn-tertiary {
+      background: var(--lilac-500);
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+
     .btn-ghost {
       background: transparent;
       border-color: rgba(102, 123, 115, 0.22);
@@ -160,7 +167,7 @@
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
       background: rgba(102, 123, 115, 0.98);
       border-bottom: 1px solid rgba(255,255,255,0.08);
       backdrop-filter: blur(10px);
@@ -187,10 +194,13 @@
 
     .nav-links > a,
     .dropdown-toggle {
-      margin: 0;
       color: var(--white);
       font-weight: 500;
       cursor: pointer;
+      background: none;
+      border: none;
+      font: inherit;
+      padding: 0;
     }
 
     .has-dropdown {
@@ -208,23 +218,20 @@
 
     .dropdown-menu {
       position: absolute;
-      top: calc(100% + 12px);
+      top: calc(100% + 14px);
       left: 50%;
       transform: translateX(-50%);
-      min-width: 300px;
+      min-width: 320px;
       background: var(--white);
       border-radius: 18px;
       box-shadow: var(--shadow-soft);
       border: 1px solid rgba(102,123,115,0.12);
       padding: 14px;
       display: none;
-      z-index: 20;
+      z-index: 1200;
     }
 
-    .has-dropdown:hover .dropdown-menu,
-    .has-dropdown:focus-within .dropdown-menu {
-      display: block;
-    }
+    .has-dropdown.open .dropdown-menu { display: block; }
 
     .dropdown-menu a {
       display: block;
@@ -270,7 +277,7 @@
       height: 2px;
       background: var(--white);
       border-radius: 99px;
-      transition: transform 0.25s ease, opacity 0.25s ease;
+      transition: transform .25s ease, opacity .25s ease;
       position: absolute;
     }
 
@@ -288,7 +295,7 @@
       inset: 76px 0 0 0;
       background: rgba(250, 248, 244, 0.98);
       backdrop-filter: blur(10px);
-      z-index: 90;
+      z-index: 1100;
       overflow-y: auto;
       border-top: 1px solid rgba(102, 123, 115, 0.12);
       padding: 18px 0 24px;
@@ -385,22 +392,59 @@
     }
 
     .section-head {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto 42px;
       text-align: center;
     }
 
     .section-head p {
-      max-width: 760px;
+      max-width: 820px;
       margin: 0 auto 14px;
+    }
+
+    .banner-wrap {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .banner-wrap img {
+      width: 100%;
+      display: block;
+    }
+
+    .story-grid,
+    .two-col,
+    .timeline-grid,
+    .grid-3,
+    .grid-4 {
+      display: grid;
+      gap: 22px;
     }
 
     .story-grid,
     .two-col {
-      display: grid;
       grid-template-columns: 0.92fr 1.08fr;
-      gap: 34px;
       align-items: center;
+    }
+
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .timeline-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .card,
+    .timeline-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(102,123,115,0.08);
+      box-shadow: var(--shadow-card);
+      padding: 24px;
+    }
+
+    .card h3,
+    .timeline-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
     }
 
     .story-photo,
@@ -418,62 +462,20 @@
       object-fit: cover;
     }
 
-    .grid-3,
-    .grid-4 {
-      display: grid;
-      gap: 22px;
-    }
-
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .grid-4 { grid-template-columns: repeat(4, 1fr); }
-
-    .card {
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(102,123,115,0.08);
-      box-shadow: var(--shadow-card);
-      padding: 24px;
-    }
-
-    .card h3 {
-      font-size: 1.35rem;
-      margin-bottom: 12px;
-    }
-
-    .quote-band {
+    .dark-strip {
       background: var(--green-900);
       color: var(--white);
     }
 
-    .quote-box {
+    .dark-box {
       max-width: 920px;
       margin: 0 auto;
       text-align: center;
     }
 
-    .quote-box p {
+    .dark-box p {
       color: rgba(255,255,255,0.92);
       font-size: 1.08rem;
-    }
-
-    .timeline {
-      display: grid;
-      gap: 18px;
-    }
-
-    .timeline-item {
-      background: var(--white);
-      border: 1px solid rgba(102,123,115,0.08);
-      border-radius: 20px;
-      padding: 22px;
-      box-shadow: var(--shadow-card);
-    }
-
-    .timeline-item strong {
-      display: block;
-      color: var(--green-900);
-      margin-bottom: 8px;
-      font-size: 1rem;
     }
 
     .cta-section {
@@ -523,7 +525,8 @@
       .story-grid,
       .two-col,
       .grid-3,
-      .grid-4 {
+      .grid-4,
+      .timeline-grid {
         grid-template-columns: 1fr;
       }
 
@@ -565,7 +568,7 @@
       }
 
       .card,
-      .timeline-item,
+      .timeline-card,
       .cta-box { padding: 22px; }
 
       .story-photo,
@@ -586,17 +589,19 @@
         <a href="/">Inicio</a>
         <a href="/prevenza/">Prevenza</a>
         <a href="/equilibrate/">Equilíbrate</a>
-        <a href="/arquenza/">Arquenza</a>
 
-        <div class="has-dropdown">
-          <span class="dropdown-toggle">Más</span>
+        <div class="has-dropdown" id="arquenzaDropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">Arquenza</button>
           <div class="dropdown-menu">
-            <a href="/aletia/">ALETIA<span>Filosofía, visión y base del universo.</span></a>
-            <a href="/quinta-vibracion/">QUINTA VIBRACIÓN<span>Método de transformación emocional y vibracional.</span></a>
-            <a href="/sobre-mi/">Sobre mí<span>Recorrido profesional, humano y diferencial.</span></a>
-            <a href="/contacto/">Contacto<span>Agenda llamada, WhatsApp o solicitud de información.</span></a>
+            <a href="/arquenza/">Arquenza<span>Familia, filosofía de vida, talleres y experiencias holísticas.</span></a>
+            <a href="/arquenza/#familias">Familias<span>Acompañamiento para procesos emocionales y familiares complejos.</span></a>
+            <a href="/arquenza/#aletia">Aletia<span>Base filosófica y visión profunda del universo Arquenza.</span></a>
+            <a href="/arquenza/#quinta-vibracion">Quinta Vibración<span>Transformación vibracional, presencia y experiencia consciente.</span></a>
           </div>
         </div>
+
+        <a href="/sobre-mi/">Sobre mí</a>
+        <a href="/contacto/">Contacto</a>
       </nav>
 
       <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel">
@@ -609,21 +614,23 @@
         <a href="/">Inicio</a>
         <a href="/prevenza/">Prevenza</a>
         <a href="/equilibrate/">Equilíbrate</a>
-        <a href="/arquenza/">Arquenza</a>
 
         <details class="mobile-submenu">
-          <summary>Más</summary>
+          <summary>Arquenza</summary>
           <div class="mobile-submenu-links">
-            <a href="/aletia/">Aletia</a>
-            <a href="/quinta-vibracion/">Quinta Vibración</a>
-            <a href="/sobre-mi/">Sobre mí</a>
-            <a href="/contacto/">Contacto</a>
+            <a href="/arquenza/">Arquenza</a>
+            <a href="/arquenza/#familias">Familias</a>
+            <a href="/arquenza/#aletia">Aletia</a>
+            <a href="/arquenza/#quinta-vibracion">Quinta Vibración</a>
           </div>
         </details>
 
+        <a href="/sobre-mi/">Sobre mí</a>
+        <a href="/contacto/">Contacto</a>
+
         <div class="mobile-contact-row">
-          <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
-          <a class="btn btn-secondary" href="/contacto/">Agenda una llamada</a>
+          <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20Sobre%20m%C3%AD%20de%20tu%20web.%20Quiero%20conocerte%20mejor%20y%20saber%20c%C3%B3mo%20podr%C3%ADas%20ayudarme." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
         </div>
       </div>
     </div>
@@ -647,9 +654,17 @@
           </p>
 
           <div class="btn-row">
-            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
-            <a class="btn btn-secondary" href="/contacto/">Agenda una llamada</a>
+            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20Sobre%20m%C3%AD%20de%20tu%20web.%20Quiero%20conocerte%20mejor%20y%20saber%20c%C3%B3mo%20podr%C3%ADas%20ayudarme." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <div class="banner-wrap">
+          <img src="../images/Banner Aletia.png" alt="Banner Aletia" />
         </div>
       </div>
     </section>
@@ -662,25 +677,25 @@
         </div>
 
         <div class="grid-4">
-          <div class="card">
-            <h3>ADE</h3>
-            <p>Base sólida en empresa, estructura y visión de negocio.</p>
-          </div>
+          <article class="card">
+            <h3>Empresa</h3>
+            <p>Base sólida en Administración y Dirección de Empresas, visión de negocio y estructura.</p>
+          </article>
 
-          <div class="card">
-            <h3>Técnico PRL</h3>
-            <p>Prevención entendida no solo como cumplimiento, sino como sostén real.</p>
-          </div>
+          <article class="card">
+            <h3>Prevención</h3>
+            <p>Técnico superior en PRL, con enfoque aplicado a empresa real y no solo a cumplimiento.</p>
+          </article>
 
-          <div class="card">
-            <h3>+10 años</h3>
-            <p>En consultoría, administración, coordinación y gestión empresarial.</p>
-          </div>
+          <article class="card">
+            <h3>Operativa</h3>
+            <p>Años coordinando administración, documentación, CAE, prevención y flujo interno.</p>
+          </article>
 
-          <div class="card">
-            <h3>+8 años</h3>
-            <p>Dentro de empresa industrial, viviendo la operativa desde dentro.</p>
-          </div>
+          <article class="card">
+            <h3>Acompañamiento</h3>
+            <p>Recorrido profundo en organización personal, emoción, energía y procesos de transformación.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -698,7 +713,7 @@
             He trabajado en consultoría y también dentro de la realidad operativa de una empresa industrial. Eso me permite hablar con propiedad de administración, coordinación, prevención, PRL, CAE, documentación, tensión operativa y pérdida invisible de dinero.
           </p>
           <p>
-            No hablo desde PowerPoint. Hablo desde lo que realmente pasa cuando una empresa depende demasiado de pocas personas, cuando la prevención se convierte en papeleo o cuando nadie está uniendo las piezas que deberían estar coordinadas.
+            No hablo desde una presentación bonita. Hablo desde lo que realmente pasa cuando una empresa depende demasiado de pocas personas, cuando la prevención se convierte en papeleo o cuando nadie está uniendo las piezas que deberían estar coordinadas.
           </p>
         </div>
       </div>
@@ -707,7 +722,7 @@
     <section class="section-tight">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Parte humana</span>
+          <span class="eyebrow">La otra parte del recorrido</span>
           <h2>También he aprendido a leer lo que no siempre se ve.</h2>
           <p>
             Mi camino no se quedó en la empresa. También me llevó a profundizar en la organización interna, la gestión emocional, el cuerpo, la energía y la forma en la que sostenemos procesos complejos cuando la vida cambia.
@@ -715,26 +730,26 @@
         </div>
 
         <div class="grid-3">
-          <div class="card">
+          <article class="card">
             <h3>Organización personal</h3>
             <p>Cómo sostener el día a día sin romperte por dentro.</p>
-          </div>
+          </article>
 
-          <div class="card">
+          <article class="card">
             <h3>Gestión emocional</h3>
             <p>Cómo acompañar procesos internos y familiares sin actuar solo desde la reacción.</p>
-          </div>
+          </article>
 
-          <div class="card">
+          <article class="card">
             <h3>Energía y presencia</h3>
             <p>Cómo crear estructura desde dentro para que lo externo no te arrastre.</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="quote-band section-tight">
-      <div class="container quote-box">
+    <section class="dark-strip section-tight">
+      <div class="container dark-box">
         <span class="eyebrow" style="background: rgba(255,255,255,0.14); color:#fff;">Mi diferencial</span>
         <h2 style="color:#fff;">No divido mi recorrido en piezas inconexas. Lo he convertido en criterio.</h2>
         <p>
@@ -746,14 +761,14 @@
     <section class="section">
       <div class="container two-col">
         <div class="profile-photo">
-          <img src="../images/P1020990.JPG" alt="Verónica Salamanca en una faceta más sensorial y cercana" />
+          <img src="../images/P1020990.JPG" alt="Verónica Salamanca en una faceta más cercana" />
         </div>
 
         <div>
           <span class="eyebrow">Por eso existen mis líneas</span>
           <h2>PREVENZA, EQUILÍBRATE y ARQUENZA no son ocurrencias. Son consecuencia.</h2>
           <p>
-            PREVENZA nace de mi recorrido en empresa, prevención y coordinación. EQUILÍBRATE nace de la necesidad de sostener la vida personal sin fractura. ARQUENZA nace de la comprensión de los procesos emocionales y familiares que dejan huella cuando no se acompañan bien.
+            PREVENZA nace de mi recorrido en empresa, prevención y coordinación. EQUILÍBRATE nace de la necesidad de sostener la vida personal sin fractura. ARQUENZA nace de la comprensión de los procesos emocionales, familiares y filosóficos que dejan huella cuando no se acompañan bien.
           </p>
           <p>
             Las tres líneas son distintas porque los contextos son distintos. Pero todas parten del mismo lugar: prevenir el caos antes de que sea más caro, más doloroso o más difícil de reparar.
@@ -765,25 +780,25 @@
     <section class="section-tight">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Línea del tiempo</span>
-          <h2>Cómo se ha construido esta mirada</h2>
+          <span class="eyebrow">Cómo se construyó esta mirada</span>
+          <h2>Una evolución con lógica interna</h2>
         </div>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <strong>Primero: empresa y estructura</strong>
-            <p>Base en ADE, prevención y años reales en consultoría, administración y coordinación operativa.</p>
-          </div>
+        <div class="timeline-grid">
+          <article class="timeline-card">
+            <h3>Primero, estructura</h3>
+            <p>Empresa, ADE, prevención, administración y coordinación operativa.</p>
+          </article>
 
-          <div class="timeline-item">
-            <strong>Después: profundidad humana</strong>
-            <p>Formación y recorrido en organización personal, gestión emocional, energía y acompañamiento.</p>
-          </div>
+          <article class="timeline-card">
+            <h3>Después, profundidad</h3>
+            <p>Organización personal, emoción, cuerpo, energía y acompañamiento humano.</p>
+          </article>
 
-          <div class="timeline-item">
-            <strong>Ahora: integración</strong>
-            <p>Una forma de trabajar que une criterio, presencia y lectura estructural de lo que está ocurriendo.</p>
-          </div>
+          <article class="timeline-card">
+            <h3>Ahora, integración</h3>
+            <p>Una forma de trabajar que une criterio, presencia y lectura real de lo que está pasando.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -797,8 +812,8 @@
             Si has llegado hasta aquí y sientes que mi forma de mirar tiene sentido para tu situación, escríbeme. Lo importante no es encajar en una etiqueta, sino saber si hay una vía real de trabajo útil para ti.
           </p>
           <div class="btn-row" style="justify-content:center;">
-            <a class="btn btn-primary" href="https://wa.me/34655355826" target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
-            <a class="btn btn-secondary" href="/contacto/">Agenda una llamada</a>
+            <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20Sobre%20m%C3%AD%20de%20tu%20web.%20Quiero%20conocerte%20mejor%20y%20saber%20c%C3%B3mo%20podr%C3%ADas%20ayudarme." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+            <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
           </div>
         </div>
       </div>
@@ -822,6 +837,8 @@
   <script>
     const mobileToggle = document.getElementById("mobileToggle");
     const mobilePanel = document.getElementById("mobilePanel");
+    const arquenzaDropdown = document.getElementById("arquenzaDropdown");
+    const dropdownButton = arquenzaDropdown ? arquenzaDropdown.querySelector(".dropdown-toggle") : null;
 
     if (mobileToggle && mobilePanel) {
       mobileToggle.addEventListener("click", () => {
@@ -838,6 +855,21 @@
           mobileToggle.setAttribute("aria-expanded", "false");
           document.body.classList.remove("menu-open");
         });
+      });
+    }
+
+    if (arquenzaDropdown && dropdownButton) {
+      dropdownButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = arquenzaDropdown.classList.toggle("open");
+        dropdownButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!arquenzaDropdown.contains(e.target)) {
+          arquenzaDropdown.classList.remove("open");
+          dropdownButton.setAttribute("aria-expanded", "false");
+        }
       });
     }
   </script>
