@@ -61,6 +61,8 @@
       line-height: 1.65;
     }
 
+    body.menu-open { overflow: hidden; }
+
     a {
       color: inherit;
       text-decoration: none;
@@ -80,7 +82,7 @@
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
       background: rgba(102, 123, 115, 0.98);
       border-bottom: 1px solid rgba(255,255,255,0.08);
       backdrop-filter: blur(10px);
@@ -102,10 +104,215 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 28px;
       color: var(--white);
       font-family: "Cinzel", serif;
-      font-size: 0.95rem;
+      font-size: 0.96rem;
+      margin: 0;
+    }
+
+    .nav-links > a,
+    .dropdown-toggle {
+      color: var(--white);
+      font-weight: 500;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font: inherit;
+      padding: 0;
+    }
+
+    .has-dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown-toggle::after {
+      content: "▾";
+      margin-left: 8px;
+      font-size: 0.78rem;
+      font-family: sans-serif;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 14px);
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 320px;
+      background: var(--white);
+      border-radius: 18px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(102,123,115,0.12);
+      padding: 14px;
+      display: none;
+      z-index: 1200;
+    }
+
+    .has-dropdown.open .dropdown-menu { display: block; }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 12px;
+      border-radius: 12px;
+      color: var(--green-900);
+      font-family: "Cinzel", serif;
+      font-size: 0.96rem;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .dropdown-menu a span {
+      display: block;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.84rem;
+      color: var(--text-500);
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    .dropdown-menu a:hover { background: var(--cream-100); }
+
+    .mobile-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: transparent;
+      border-radius: 14px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      position: relative;
+    }
+
+    .mobile-toggle span,
+    .mobile-toggle::before,
+    .mobile-toggle::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 99px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      position: absolute;
+    }
+
+    .mobile-toggle span { transform: translateY(0); }
+    .mobile-toggle::before { transform: translateY(-7px); }
+    .mobile-toggle::after { transform: translateY(7px); }
+
+    .mobile-toggle.active span { opacity: 0; }
+    .mobile-toggle.active::before { transform: rotate(45deg); }
+    .mobile-toggle.active::after { transform: rotate(-45deg); }
+
+    .mobile-panel {
+      display: none;
+      position: fixed;
+      inset: 76px 0 0 0;
+      background: rgba(250, 248, 244, 0.98);
+      backdrop-filter: blur(10px);
+      z-index: 1100;
+      overflow-y: auto;
+      border-top: 1px solid rgba(102, 123, 115, 0.12);
+      padding: 18px 0 24px;
+    }
+
+    .mobile-panel.open { display: block; }
+
+    .mobile-nav {
+      width: min(var(--max), calc(100% - 1.2rem));
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mobile-nav > a,
+    .mobile-submenu summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--white);
+      color: var(--green-900);
+      border: 1px solid rgba(102, 123, 115, 0.12);
+      border-radius: 16px;
+      padding: 16px 18px;
+      font-family: "Cinzel", serif;
+      font-size: 1.05rem;
+      box-shadow: var(--shadow-card);
+      margin: 0;
+    }
+
+    .mobile-submenu summary {
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .mobile-submenu summary::-webkit-details-marker { display: none; }
+
+    .mobile-submenu[open] summary {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .mobile-submenu-links {
+      background: var(--white);
+      border: 1px solid rgba(102,123,115,0.12);
+      border-top: 0;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      padding: 6px 10px 12px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .mobile-submenu-links a {
+      display: block;
+      padding: 12px 10px;
+      border-radius: 12px;
+      color: var(--green-900);
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.96rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .mobile-submenu-links a + a { margin-top: 4px; }
+    .mobile-submenu-links a:hover { background: var(--cream-100); }
+
+    .mobile-contact-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--green-900);
+      color: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+
+    .btn-secondary {
+      background: var(--gold-500);
+      color: var(--white);
+      box-shadow: var(--shadow-card);
     }
 
     .hero {
@@ -182,14 +389,6 @@
       margin-top: 8px;
     }
 
-    .highlight {
-      background: rgba(167,198,183,0.10);
-      border: 1px solid rgba(167,198,183,0.20);
-      padding: 16px 18px;
-      border-radius: 16px;
-      margin-top: 14px;
-    }
-
     .site-footer {
       background: #4f665c;
       color: rgba(255,255,255,0.82);
@@ -212,10 +411,9 @@
       font-size: 0.95rem;
     }
 
-    @media (max-width: 900px) {
-      .nav-links {
-        display: none;
-      }
+    @media (max-width: 1080px) {
+      .nav-links { display: none; }
+      .mobile-toggle { display: inline-flex; }
     }
 
     @media (max-width: 720px) {
@@ -252,10 +450,50 @@
         <a href="/">Inicio</a>
         <a href="/prevenza/">Prevenza</a>
         <a href="/equilibrate/">Equilíbrate</a>
-        <a href="/arquenza/">Arquenza</a>
+
+        <div class="has-dropdown" id="arquenzaDropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">Arquenza</button>
+          <div class="dropdown-menu">
+            <a href="/arquenza/">Arquenza<span>Familia, filosofía de vida, talleres y experiencias holísticas.</span></a>
+            <a href="/arquenza/#familias">Familias<span>Acompañamiento para procesos emocionales y familiares complejos.</span></a>
+            <a href="/arquenza/#aletia">Aletia<span>Base filosófica y visión profunda del universo Arquenza.</span></a>
+            <a href="/arquenza/#quinta-vibracion">Quinta Vibración<span>Transformación vibracional, presencia y experiencia consciente.</span></a>
+          </div>
+        </div>
+
         <a href="/sobre-mi/">Sobre mí</a>
         <a href="/contacto/">Contacto</a>
       </nav>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobilePanel">
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-panel" id="mobilePanel">
+      <div class="mobile-nav">
+        <a href="/">Inicio</a>
+        <a href="/prevenza/">Prevenza</a>
+        <a href="/equilibrate/">Equilíbrate</a>
+
+        <details class="mobile-submenu">
+          <summary>Arquenza</summary>
+          <div class="mobile-submenu-links">
+            <a href="/arquenza/">Arquenza</a>
+            <a href="/arquenza/#familias">Familias</a>
+            <a href="/arquenza/#aletia">Aletia</a>
+            <a href="/arquenza/#quinta-vibracion">Quinta Vibración</a>
+          </div>
+        </details>
+
+        <a href="/sobre-mi/">Sobre mí</a>
+        <a href="/contacto/">Contacto</a>
+
+        <div class="mobile-contact-row">
+          <a class="btn btn-primary" href="https://wa.me/34655355826?text=Hola%20Ver%C3%B3nica%2C%20te%20escribo%20desde%20la%20p%C3%A1gina%20de%20contacto%20de%20tu%20web.%20Quiero%20hablar%20contigo." target="_blank" rel="noopener">Escríbeme por WhatsApp</a>
+          <a class="btn btn-secondary" href="https://calendly.com/veronicasalamanca-mp" target="_blank" rel="noopener">Agenda una sesión</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -265,7 +503,7 @@
         <span class="eyebrow">Cookies</span>
         <h1>Política de cookies</h1>
         <p>
-          En esta página se informa sobre el uso de cookies en www.veronicasalamanca.com, su finalidad y cómo puedes gestionarlas desde tu navegador o, en su caso, desde las herramientas de consentimiento que se incorporen al sitio.
+          En esta página se informa sobre el uso de cookies en www.veronicasalamanca.com, su finalidad y la forma en la que puedes gestionarlas desde tu navegador.
         </p>
       </div>
     </section>
@@ -277,76 +515,38 @@
           <section class="legal-section">
             <h2>1. Qué son las cookies</h2>
             <p>
-              Las cookies son pequeños archivos de texto que se almacenan en el dispositivo de la persona usuaria cuando visita un sitio web. Sirven para recordar información sobre la visita, facilitar determinadas funciones y, en algunos casos, obtener datos estadísticos o de comportamiento de navegación.
+              Las cookies son pequeños archivos que se almacenan en tu dispositivo cuando visitas una página web. Su función puede ser técnica, de personalización, de análisis o de mejora de la experiencia de navegación.
             </p>
           </section>
 
           <section class="legal-section">
             <h2>2. Qué tipos de cookies pueden utilizarse</h2>
             <ul>
-              <li><strong>Cookies técnicas o necesarias:</strong> permiten el funcionamiento básico del sitio web y la prestación de servicios esenciales.</li>
-              <li><strong>Cookies de personalización:</strong> recuerdan determinadas preferencias del usuario para mejorar su experiencia.</li>
-              <li><strong>Cookies de análisis o medición:</strong> permiten conocer cómo navegan las personas usuarias para mejorar el rendimiento y la estructura del sitio.</li>
-              <li><strong>Cookies publicitarias o de terceros:</strong> pueden utilizarse si se integran herramientas externas, campañas, vídeos, formularios, analítica avanzada o plataformas de agenda.</li>
+              <li><strong>Cookies técnicas:</strong> necesarias para el funcionamiento básico del sitio web.</li>
+              <li><strong>Cookies de personalización:</strong> permiten recordar ciertas preferencias.</li>
+              <li><strong>Cookies de análisis:</strong> ayudan a comprender cómo se utiliza la web para mejorarla.</li>
+              <li><strong>Cookies de terceros:</strong> pueden proceder de herramientas externas integradas en el sitio.</li>
             </ul>
           </section>
 
           <section class="legal-section">
-            <h2>3. Cookies utilizadas en este sitio</h2>
+            <h2>3. Gestión de cookies</h2>
             <p>
-              Actualmente, este sitio puede utilizar cookies técnicas necesarias para su funcionamiento. Si en el futuro se incorporan herramientas de analítica, publicidad, agenda, vídeo incrustado o integraciones de terceros, esta política deberá actualizarse para reflejarlo correctamente.
-            </p>
-
-            <div class="highlight">
-              <p><strong>Importante:</strong> si activas herramientas como Google Analytics, Meta Pixel, Calendly embebido, YouTube, mapas, chat externos o sistemas avanzados de seguimiento, necesitarás complementar esta política con un banner de consentimiento y una configuración adecuada de cookies.</p>
-            </div>
-          </section>
-
-          <section class="legal-section">
-            <h2>4. Finalidad de las cookies</h2>
-            <p>
-              Las cookies que puedan utilizarse en este sitio tienen como finalidad:
-            </p>
-            <ul>
-              <li>Garantizar el correcto funcionamiento técnico del sitio web.</li>
-              <li>Mejorar la experiencia de navegación.</li>
-              <li>Recordar determinadas preferencias del usuario.</li>
-              <li>Analizar el uso del sitio para optimizar su estructura, contenidos o rendimiento.</li>
-              <li>Facilitar la integración de herramientas o servicios de terceros, cuando corresponda.</li>
-            </ul>
-          </section>
-
-          <section class="legal-section">
-            <h2>5. Cómo desactivar o eliminar cookies</h2>
-            <p>
-              La persona usuaria puede permitir, bloquear o eliminar las cookies mediante la configuración de su navegador. Debe tener en cuenta que, si desactiva determinadas cookies, algunas funcionalidades del sitio podrían no estar disponibles o no funcionar correctamente.
-            </p>
-            <p>
-              La gestión de cookies puede realizarse desde la configuración del navegador utilizado, como por ejemplo Google Chrome, Mozilla Firefox, Safari, Microsoft Edge u otros navegadores compatibles.
+              Puedes permitir, bloquear o eliminar las cookies desde la configuración de tu navegador. Ten en cuenta que, si desactivas algunas de ellas, determinadas funciones del sitio podrían no estar disponibles o no funcionar correctamente.
             </p>
           </section>
 
           <section class="legal-section">
-            <h2>6. Cookies de terceros</h2>
+            <h2>4. Cambios en la política de cookies</h2>
             <p>
-              Si este sitio web utiliza herramientas o servicios externos, algunas cookies pueden ser instaladas por terceros. En ese caso, el tratamiento de los datos derivados de dichas cookies podrá estar sujeto también a las políticas de privacidad y cookies propias de esos proveedores.
-            </p>
-            <p>
-              Se recomienda revisar la información legal de cada servicio externo que llegue a integrarse en este sitio.
+              Esta política podrá actualizarse si se incorporan nuevas herramientas, cambian las cookies utilizadas o se modifican las exigencias legales aplicables.
             </p>
           </section>
 
           <section class="legal-section">
-            <h2>7. Actualización de la política de cookies</h2>
+            <h2>5. Contacto</h2>
             <p>
-              Esta política de cookies podrá actualizarse para adaptarse a cambios normativos, técnicos o a nuevas herramientas instaladas en el sitio web. Se recomienda revisarla periódicamente.
-            </p>
-          </section>
-
-          <section class="legal-section">
-            <h2>8. Contacto</h2>
-            <p>
-              Si tienes dudas sobre esta política de cookies, puedes escribir a escribenos@veronicasalamanca.com o contactar a través de los medios habilitados en la web.
+              Si tienes dudas sobre esta política de cookies, puedes escribir a escribenos@veronicasalamanca.com.
             </p>
           </section>
 
@@ -367,5 +567,45 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const mobileToggle = document.getElementById("mobileToggle");
+    const mobilePanel = document.getElementById("mobilePanel");
+    const arquenzaDropdown = document.getElementById("arquenzaDropdown");
+    const dropdownButton = arquenzaDropdown ? arquenzaDropdown.querySelector(".dropdown-toggle") : null;
+
+    if (mobileToggle && mobilePanel) {
+      mobileToggle.addEventListener("click", () => {
+        const isOpen = mobilePanel.classList.toggle("open");
+        mobileToggle.classList.toggle("active", isOpen);
+        mobileToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        document.body.classList.toggle("menu-open", isOpen);
+      });
+
+      mobilePanel.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          mobilePanel.classList.remove("open");
+          mobileToggle.classList.remove("active");
+          mobileToggle.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("menu-open");
+        });
+      });
+    }
+
+    if (arquenzaDropdown && dropdownButton) {
+      dropdownButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = arquenzaDropdown.classList.toggle("open");
+        dropdownButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!arquenzaDropdown.contains(e.target)) {
+          arquenzaDropdown.classList.remove("open");
+          dropdownButton.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+  </script>
 </body>
 </html>
